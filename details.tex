@@ -1,0 +1,534 @@
+\documentclass[a0paper,landscape,fleqn]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amssymb}
+\usepackage{amsmath}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\begin{document}
+
+\begin{equation*}\lim_{x\to0}\frac{\sin x}{x}=1\end{equation*}
+\begin{equation*}\lim_{x\to0}\frac{\cos x-1}{x}=0\end{equation*}
+\begin{equation*}e^{i\theta}=\cos{\theta}+i\sin{theta}\end{equation*}
+\begin{equation*}
+e^{i(a+b)}
+=\cos(a+b)+i\sin(a+b)
+=e^{ia}e^{ib}
+=(\cos a+i\sin a)(\cos b+i\sin b)
+=\cos a\cos b-\sin a\sin b+i(\cos a\sin b+\sin a\cos b)
+\end{equation*}
+\begin{equation*}\cos(a+b)=\cos a\cos b-\sin a\sin b\end{equation*}
+\begin{equation*}\sin(a+b)=\cos a\sin b+\cos b\sin a\end{equation*}
+\begin{equation*}
+\frac{d\,f^{-1}(x)}{dx}=\frac{1}{f^\prime(f^{-1}(x))}
+\end{equation*}
+\hrule
+\begin{equation*}
+\sin^\prime x
+=\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}
+=\lim_{h\to0}\frac{\cos x\sin h+\sin x\cos h-\sin x}{h}
+=\lim_{h\to0}\frac{\cos x\sin h+\sin x(\cos h-1)}{h}
+=\cos x\left(\lim_{h\to0}\frac{\sin h}{h}\right)+\sin x\left(\lim_{h\to0}\frac{\cos h-1}{h}\right)
+=\cos x
+\end{equation*}
+\hrule
+\begin{equation*}
+\cos^\prime x
+=\frac{d\sqrt{1-\sin^2 x}}{dx}
+=\frac{1}{2\sqrt{\sin^2 x-1}}(-1)2\sin x\cos x
+=-\frac{2\sin x\cos x}{2\cos x}
+=-\sin x
+\end{equation*}
+\hrule
+\begin{equation*}
+\tan^\prime x
+=\frac{d\frac{\sin x}{\cos x}}{dx}
+=\frac{\sin^\prime x\cos x-\sin x\cos^\prime x}{\cos^2 x}
+=\frac{\cos x\cos x+\sin x\sin x}{\cos^2 x}
+=\frac{\cos^2 x+\sin^2 x}{\cos^2 x}
+=\frac{1}{\cos^2 x}
+=\sec^2 x
+\end{equation*}
+\hrule
+\begin{equation*}
+\cot^\prime x
+=\frac{d\frac{1}{\tan x}}{dx}
+=-\frac{\tan^\prime x}{\tan^2 x}
+=-\frac{\sec^2 x}{\tan^2 x}
+=-\frac{1}{\cos^2 x}\frac{\cos^2 x}{\sin^2 x}
+=-\frac{1}{\sin^2 x}
+=-\csc^2 x
+\end{equation*}
+\hrule
+\begin{equation*}
+\sec^\prime x
+=\frac{d\frac{1}{\cos x}}{dx}
+=-\frac{\cos^\prime x}{\cos^2 x}
+=\frac{\sin x}{\cos^2 x}
+=\sec x\tan x
+\end{equation*}
+\hrule
+\begin{equation*}
+\csc^\prime x
+=\frac{d\frac{1}{\sin x}}{dx}
+=-\frac{\sin^\prime x}{\sin^2 x}
+=-\frac{\cos x}{\sin^2 x}
+=-\csc x\cot x
+\end{equation*}
+\hrule%arsin'
+\begin{equation*}
+\arcsin^\prime x
+=\frac{1}{\sin^\prime(\arcsin(x))}
+=\frac{1}{\cos(\arcsin(x))}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsin^\prime (\sin x)
+=\frac{1}{\cos(\arcsin(\sin x))}
+=\frac{1}{\cos x}
+=\frac{1}{\sqrt{1-(\sin x)^2}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsin^\prime x
+=\frac{1}{\sqrt{1-x^2}}
+\end{equation*}
+\hrule%arccos'
+\begin{equation*}
+\arccos^\prime x
+=\frac{1}{\cos^\prime(\arccos(x))}
+=-\frac{1}{\sin(\arccos(x))}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccos^\prime (\cos x)
+=-\frac{1}{\sin(\arccos(\cos x))}
+=-\frac{1}{\sin x}
+=-\frac{1}{\sqrt{1-(\cos x)^2}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccos^\prime x
+=-\frac{1}{\sqrt{1-x^2}}
+\end{equation*}
+\hrule%arctan'
+\begin{equation*}
+\arctan^\prime x
+=\frac{1}{\tan^\prime(\arctan(x))}
+=\frac{1}{\sec^2(\arctan(x))}
+=\cos^2(\arctan x)
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arctan^\prime (\tan x)
+=\cos^2(\arctan (\tan x))
+=\cos^2 x
+\end{equation*}
+\begin{equation*}
+\tan x
+=\frac{\sin x}{\cos x}
+=\frac{\sqrt{1-\cos^2 x}}{\cos x}
+\end{equation*}
+\begin{equation*}\Rightarrow\tan^2 x=\frac{1-\cos^2 x}{\cos^2 x}\end{equation*}
+\begin{equation*}\Rightarrow\cos^2 x\tan^2 x=1-\cos^2 x\end{equation*}
+\begin{equation*}\Rightarrow\cos^2 x\tan^2 x+\cos^2 x=1\end{equation*}
+\begin{equation*}\Rightarrow\cos^2 x(1+\tan^2 x)=1\end{equation*}
+\begin{equation*}\Rightarrow\cos^2 x=\frac{1}{1+\tan^2 x}\end{equation*}
+\begin{equation*}
+\Rightarrow\arctan^\prime (\tan x)
+=\cos^2 x
+=\frac{1}{1+\tan^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arctan^\prime x
+=\frac{1}{1+x^2}
+\end{equation*}
+\hrule%arccot'
+\begin{equation*}
+\arccot^\prime x
+=\frac{1}{\cot^\prime(\arccot(x))}
+=-\frac{1}{\csc^2(\arccot(x))}
+=-\sin^2(\arccot(x))
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccot^\prime(\cot x)
+=-\sin^2(\arccot(\cot x))
+=-\sin^2(x)
+\end{equation*}
+\begin{equation*}
+\cot x
+=\frac{\cos x}{\sin x}
+=\frac{\sqrt{1-\sin^2 x}}{\sin x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\cot^2 x
+=\frac{1-\sin^2 x}{\sin^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow-\sin^2 x
+=-\frac{1}{\cot^2 x+1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccot^\prime(\cot x)
+=-\sin^2(x)
+=-\frac{1}{\cot^2 x+1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccot^\prime x
+=-\frac{1}{x^2+1}
+\end{equation*}
+\hrule%arcsec'
+\begin{equation*}
+\arcsec^\prime x
+=\frac{1}{\sec^\prime(\arcsec(x))}
+=\frac{1}{\sec(\arcsec(x))\tan(\arcsec(x))}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsec^\prime(\sec x)
+=\frac{1}{\sec(\arcsec(\sec x))\tan(\arcsec(\sec x))}
+=\frac{1}{\sec x\tan x}
+\end{equation*}
+\begin{equation*}
+\tan x
+=\frac{\sin x}{\cos x}
+=\sec x\sin x
+=\sec x\sqrt{1-\cos^2 x}
+=\sec x\sqrt{1-\frac{1}{\sec^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\tan^2 x
+=\sec^2 x\left(1-\frac{1}{\sec^2 x}\right)
+=\sec^2 x-1
+\end{equation*}
+\begin{equation*}
+\Rightarrow|\tan x|
+=\sqrt{\sec^2 x-1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsec^\prime(\sec x)
+=\frac{1}{\sec x\tan x}
+=\frac{1}{|\sec x|\sqrt{\sec^2 x-1}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsec^\prime(x)
+=\frac{1}{|x|\sqrt{x^2-1}}
+\end{equation*}
+\hrule%arccsc'
+\begin{equation*}
+\arccsc^\prime x
+=\frac{1}{\csc^\prime(\arccsc(x))}
+=-\frac{1}{\csc(\arccsc(x))\cot(\arccsc(x))}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsc^\prime (\csc x)
+=-\frac{1}{\csc(\arccsc(\csc x))\cot(\arccsc(\csc x))}
+=-\frac{1}{\csc x\cot x}
+\end{equation*}
+\begin{equation*}
+\cot x
+=\frac{\cos x}{\sin x}
+=\frac{\sqrt{1-\sin^2 x}}{\sin x}
+=\csc x\sqrt{1-\frac{1}{\csc^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\cot^2 x
+=\csc^2 x\left(1-\frac{1}{\csc^2 x}\right)
+=1-\csc^2 x
+\end{equation*}
+\begin{equation*}
+\Rightarrow|\cot x|
+=\sqrt{1-\csc^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsc^\prime (\csc x)
+=-\frac{1}{\csc x\cot x}
+=-\frac{1}{|\csc x|\sqrt{1-\csc^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsc^\prime x
+=-\frac{1}{|x|\sqrt{1-x^2}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\sinh x=\frac{e^x-e^{-x}}{2}
+\end{equation*}
+\hrule
+\begin{equation*}
+\cosh x=\frac{e^x+e^{-x}}{2}
+\end{equation*}
+\hrule
+\begin{equation*}
+\tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\coth x=\frac{1}{\tanh x}=\frac{e^x+e^{-x}}{e^x-e^{-x}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\sech x=\frac{1}{\cosh x}=\frac{2}{e^x+e^{-x}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\csch x=\frac{1}{\sinh x}=\frac{2}{e^x-e^{-x}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arcsinh x=\sinh^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccosh x=\cosh^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arctanh x=\tanh^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccoth x=\coth^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arcsech x=\sech^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccsch x=\csch^{-1} x
+\end{equation*}
+\hrule
+\begin{equation*}
+\sinh^\prime x
+=\frac{d\frac{e^x-e^{-x}}{2}}{dx}
+=\frac{e^x+e^{-x}}{2}
+=\cosh x
+\end{equation*}
+\hrule
+\begin{equation*}
+\cosh^\prime x
+=\frac{d\frac{e^x+e^{-x}}{2}}{dx}
+=\frac{e^x-e^{-x}}{2}
+=\sin x
+\end{equation*}
+\hrule
+\begin{equation*}
+\tanh^\prime x
+=\frac{d\frac{\sinh x}{\cosh x}}{dx}
+=\frac{\sinh^\prime x\cosh x-\sinh x\cosh^\prime x}{\cosh^2 x}
+=\frac{\cosh^2 x-\sinh^2 x}{\cosh^2 x}
+=\frac{1}{\cosh^2 x}
+=\sech^2 x
+\end{equation*}
+\hrule
+\begin{equation*}
+\coth^\prime x
+=\frac{d\frac{1}{\tanh x}}{dx}
+=-\frac{\tanh^\prime x}{\tanh^2 x}
+=-\frac{\sech^2 x}{\tanh^2 x}
+=-\frac{1}{\cosh^2 x}\frac{\cosh^2 x}{\sinh^2 x}=-\csch^2 x
+\end{equation*}
+\hrule
+\begin{equation*}
+\sech^\prime x
+=\frac{d\frac{1}{\cosh x}}{dx}
+=-\frac{\cosh^\prime x}{\cosh^2 x}
+=-\frac{\sinh x}{\cosh^2 x}
+=-\sech x\tanh x
+\end{equation*}
+\hrule
+\begin{equation*}
+\csch^\prime x
+=\frac{d\frac{1}{\sinh x}}{dx}
+=-\frac{\sinh^\prime x}{\sinh^2 x}
+=-\frac{\cosh x}{\sinh^2 x}
+=-\csch x\coth x
+\end{equation*}
+\hrule
+\begin{equation*}
+\arcsinh^\prime x
+=\frac{1}{\sinh^\prime(\arcsinh x)}
+=\frac{1}{\cosh(\arcsinh x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsinh^\prime (\sinh x)
+=\frac{1}{\cosh(\arcsinh(\sinh x))}
+=\frac{1}{\cosh x}
+\end{equation*}
+\begin{equation*}
+\cosh^2 x-\sinh^2 x=1
+\end{equation*}
+\begin{equation*}
+\Rightarrow|\cosh x|=\sqrt{1+\sinh^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\cosh x=\sqrt{1+\sinh^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsinh^\prime (\sinh x)
+=\frac{1}{\cosh x}
+=\frac{1}{\sqrt{1+\sinh^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsinh^\prime x
+=\frac{1}{\sqrt{1+x^2}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccosh^\prime x
+=\frac{1}{\cosh^\prime(\arccosh x)}
+=\frac{1}{\sinh(\arcsinh x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccosh^\prime (\cosh x)
+=\frac{1}{\sinh(\arccosh(\cosh x))}
+=\frac{1}{\sinh x}
+\end{equation*}
+\begin{equation*}
+\cosh^2 x-\sinh^2 x=1
+\end{equation*}
+\begin{equation*}
+\Rightarrow|\sinh x|=\sqrt{\cosh^2 x-1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\sinh x=\sqrt{\cosh^2 x-1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccosh^\prime (\cosh x)
+=\frac{1}{\sinh x}
+=\frac{1}{\sqrt{\cosh^2 x-1}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccosh^\prime x
+=\frac{1}{\sqrt{x^2-1}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arctanh^\prime x
+=\frac{1}{\tanh^\prime(\arctanh x)}
+=\frac{1}{\sech^2(\arctanh x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arctanh^\prime(\tanh x)
+=\frac{1}{\sech^2(\arctanh(\tanh x))}
+=\frac{1}{\sech^2 x}
+\end{equation*}
+\begin{equation*}
+\tanh^2 x
+=\frac{\sinh^2 x}{\cosh^2 x}
+=\sech^2 x \sinh^2 x
+=\sech^2 x (\cosh^2 x-1)
+=\sech^2 x \left(\frac{1}{\sech^2 x}-1\right)
+=1-\sech^2 x
+\end{equation*}
+\begin{equation*}
+\Rightarrow\sech^2 x
+=1-\tanh^2 x
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arctanh^\prime(\tanh x)
+=\frac{1}{1-\tanh^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arctanh^\prime x
+=\frac{1}{1-x^2}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccoth^\prime x
+=\frac{1}{\coth^\prime(\arccoth x)}
+=-\frac{1}{\csch^2(\arccoth x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccoth^\prime(\coth x)
+=-\frac{1}{\csch^2(\arccoth(\coth x))}
+=-\frac{1}{\csch^2 x}
+\end{equation*}
+\begin{equation*}
+\coth x
+=\frac{\cosh x}{\sinh x}
+=\csch x\cosh x
+=\csch x\sqrt{1+\sinh^2 x}
+=\csch x\sqrt{1+\frac{1}{\csch^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\coth^2 x
+=\csch^2 x\left(1+\frac{1}{\csch^2 x}\right)
+=\csch^2 x+1
+\end{equation*}
+\begin{equation*}
+\Rightarrow\csch^2 x
+=\coth^2 x-1
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccoth^\prime(\coth x)
+=-\frac{1}{\csch^2 x}
+=-\frac{1}{\coth^2 x-1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccoth^\prime x
+=-\frac{1}{\csch^2 x}
+=-\frac{1}{x^2-1}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arcsech^\prime x
+=\frac{1}{\sech^\prime(\arcsech x)}
+=-\frac{1}{\sech(\arcsech x)\tanh(\arcsech x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsech^\prime(\sech x)
+=-\frac{1}{\sech(\arcsech(\sech x))\tanh(\arcsech (\sech x))}
+=-\frac{1}{\sech x\tanh x}
+\end{equation*}
+\begin{equation*}
+\tanh x
+=\frac{\sinh x}{\cosh x}
+=\sech x\sinh x
+=\sech x\sqrt{\cosh^2 x-1}
+=\sech x\sqrt{\frac{1}{\sech^2 x}-1}
+=\sqrt{1-\sech^2 x}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsech^\prime(\sech x)
+=-\frac{1}{\sech x\tanh x}
+=-\frac{1}{\sech x\sqrt{1-\sech^2 x}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arcsech^\prime x
+=-\frac{1}{\sech x\tanh x}
+=-\frac{1}{x\sqrt{1-x^2}}
+\end{equation*}
+\hrule
+\begin{equation*}
+\arccsch^\prime x
+=\frac{1}{\csch^\prime(\arccsch x)}
+=-\frac{1}{\csch(\arccsch x)\coth(\arccsch x)}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsch^\prime(\csch x)
+=-\frac{1}{\csch(\arccsch(\csch x))\coth(\arccsch(\csch x))}
+=-\frac{1}{\csch x\coth x}
+\end{equation*}
+\begin{equation*}
+\coth x
+=\frac{\cosh x}{\sinh x}
+=\csch x\cosh x
+=\csch x\sqrt{1+\sinh^2 x}
+=\csch x\sqrt{1+\frac{1}{\csch^2 x}}
+=\sqrt{\csch^2 x+1}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsch^\prime(\csch x)
+=-\frac{1}{\csch x\coth x}
+=-\frac{1}{\csch x\sqrt{\csch^2 x+1}}
+\end{equation*}
+\begin{equation*}
+\Rightarrow\arccsch^\prime x
+=-\frac{1}{x\sqrt{x^2+1}}
+\end{equation*}
+\end{document}

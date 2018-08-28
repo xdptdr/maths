@@ -1,0 +1,96 @@
+\documentclass[a0paper,landscape]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\begin{document}
+\begin{tikzpicture}
+\node[anchor=north west] (a) {$\displaystyle\sin(x)$};
+\node[below = 0cm of a.south west, anchor=north west] (b) {$\displaystyle\cos(x)$};
+\node[below = 0cm of b.south west, anchor=north west] (c) {$\displaystyle\tan(x)=\frac{\sin(x)}{\cos(x)}$};
+\node[below = 0cm of c.south west, anchor=north west] (d) {$\displaystyle\cot(x)=\frac{1}{\tan(x)}$};
+\node[below = 0cm of d.south west, anchor=north west] (e) {$\displaystyle\sec(x)=\frac{1}{\cos(x)}$};
+\node[below = 0cm of e.south west, anchor=north west] (f) {$\displaystyle\csc(x)=\frac{1}{\sin(x)}$};
+\node[below = 0cm of f.south west, anchor=north west] (g) {$\displaystyle\arcsin(x)=\sin^{-1}(x)$};
+\node[below = 0cm of g.south west, anchor=north west] (h) {$\displaystyle\arccos(x)=\cos^{-1}(x)$};
+\node[below = 0cm of h.south west, anchor=north west] (i) {$\displaystyle\arctan(x)=\tan^{-1}(x)$};
+\node[below = 0cm of i.south west, anchor=north west] (j) {$\displaystyle\arccot(x)=\cot^{-1}(x)$};
+\node[below = 0cm of j.south west, anchor=north west] (k) {$\displaystyle\arcsec(x)=\sec^{-1}(x)$};
+\node[below = 0cm of k.south west, anchor=north west] (l) {$\displaystyle\arccsc(x)=\csc^{-1}(x)$};
+\node[below = 0cm of l.south west, anchor=north west] (m) {$\displaystyle\sin^\prime(x)=\cos(x)$};
+\node[below = 0cm of m.south west, anchor=north west] (n) {$\displaystyle\cos^\prime(x)=-\sin(x)$};
+\node[below = 0cm of n.south west, anchor=north west] (o) {$\displaystyle\tan^\prime(x)=\sec^2(x)$};
+\node[below = 0cm of o.south west, anchor=north west] (p) {$\displaystyle\cot^\prime(x)=-\csc^2(x)$};
+\node[below = 0cm of p.south west, anchor=north west] (q) {$\displaystyle\sec^\prime(x)=\sec(x)\tan(x)$};
+\node[below = 0cm of q.south west, anchor=north west] (r) {$\displaystyle\csc^\prime(x)=-\csc(x)\cot(x)$};
+\node[below = 0cm of r.south west, anchor=north west] (s) {$\displaystyle\arcsin^\prime(x)=$};
+\node[below = 0cm of s.south west, anchor=north west] (t) {$\displaystyle\arccos^\prime(x)=$};
+\node[below = 0cm of t.south west, anchor=north west] (u) {$\displaystyle\arctan^\prime(x)=$};
+\node[below = 0cm of u.south west, anchor=north west] (v) {$\displaystyle\arccot^\prime(x)=$};
+\node[below = 0cm of v.south west, anchor=north west] (w) {$\displaystyle\arcsec^\prime(x)=$};
+\node[below = 0cm of w.south west, anchor=north west] (x) {$\displaystyle\arccsc^\prime(x)=$};
+\node[below = 0cm of x.south west, anchor=north west] (y) {$\displaystyle\int\sin(x)\,dx=-\cos(x)$};
+\node[below = 0cm of y.south west, anchor=north west] (z) {$\displaystyle\int\cos(x)\,dx=\sin(x)$};
+\node[below = 0cm of z.south west, anchor=north west] (aa) {$\displaystyle\int\tan(x)\,dx=$};
+\node[below = 0cm of aa.south west, anchor=north west] (ab) {$\displaystyle\int\cot(x)\,dx=$};
+\node[below = 0cm of ab.south west, anchor=north west] (ac) {$\displaystyle\int\sec(x)\,dx=$};
+\node[below = 0cm of ac.south west, anchor=north west] (ad) {$\displaystyle\int\csc(x)\,dx=$};
+\node[below = 0cm of ad.south west, anchor=north west] (ae) {$\displaystyle\int\arcsin(x)\,dx=$};
+\node[below = 0cm of ae.south west, anchor=north west] (af) {$\displaystyle\int\arccos(x)\,dx=$};
+\node[below = 0cm of af.south west, anchor=north west] (ag) {$\displaystyle\int\arctan(x)\,dx=$};
+\node[below = 0cm of ag.south west, anchor=north west] (ah) {$\displaystyle\int\arccot(x)\,dx=$};
+\node[below = 0cm of ah.south west, anchor=north west] (ai) {$\displaystyle\int\arcsec(x)\,dx=$};
+\node[below = 0cm of ai.south west, anchor=north west] (aj) {$\displaystyle\int\arccsc(x)\,dx=$};
+
+\node[below = 0cm of aj.south west, anchor=north west] (ak) {$\displaystyle\sinh(x)=\frac{e^x-e^{-x}}{2}$};
+\node[below = 0cm of ak.south west, anchor=north west] (al) {$\displaystyle\cosh(x)=\frac{e^x+e^{-x}}{2}$};
+\node[below = 0cm of al.south west, anchor=north west] (am) {$\displaystyle\tanh(x)=\frac{\sinh(x)}{\cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$};
+\node[below = 0cm of am.south west, anchor=north west] (an) {$\displaystyle\coth(x)=\frac{1}{\tanh(x)}=\frac{e^x+e^{-x}}{e^x-e^{-x}}$};
+\node[below = 0cm of an.south west, anchor=north west] (ao) {$\displaystyle\sech(x)=\frac{1}{\cosh(x)}=\frac{2}{e^x+e^{-x}}$};
+\node[below = 0cm of ao.south west, anchor=north west] (ap) {$\displaystyle\csch(x)=\frac{1}{\sinh(x)}=\frac{2}{e^x-e^{-x}}$};
+\node[below = 0cm of ap.south west, anchor=north west] (aq) {$\displaystyle\arcsinh(x)=\sinh^{-1}(x)$};
+\node[below = 0cm of aq.south west, anchor=north west] (ar) {$\displaystyle\arccosh(x)=\cosh^{-1}(x)$};
+\node[below = 0cm of ar.south west, anchor=north west] (as) {$\displaystyle\arctanh(x)=\tanh^{-1}(x)$};
+\node[below = 0cm of as.south west, anchor=north west] (at) {$\displaystyle\arccoth(x)=\coth^{-1}(x)$};
+\node[below = 0cm of at.south west, anchor=north west] (au) {$\displaystyle\arcsech(x)=\sech^{-1}(x)$};
+\node[below = 0cm of au.south west, anchor=north west] (av) {$\displaystyle\arccsch(x)=\csch^{-1}(x)$};
+\node[below = 0cm of av.south west, anchor=north west] (aw) {$\displaystyle\sinh^\prime(x)=$};
+\node[below = 0cm of aw.south west, anchor=north west] (ax) {$\displaystyle\cosh^\prime(x)=$};
+\node[below = 0cm of ax.south west, anchor=north west] (ay) {$\displaystyle\tanh^\prime(x)=$};
+\node[below = 0cm of ay.south west, anchor=north west] (az) {$\displaystyle\coth^\prime(x)=$};
+\node[below = 0cm of az.south west, anchor=north west] (ba) {$\displaystyle\sech^\prime(x)=$};
+\node[below = 0cm of ba.south west, anchor=north west] (bb) {$\displaystyle\csch^\prime(x)=$};
+\node[below = 0cm of bb.south west, anchor=north west] (bc) {$\displaystyle\arcsinh^\prime(x)=$};
+\node[below = 0cm of bc.south west, anchor=north west] (bd) {$\displaystyle\arccosh^\prime(x)=$};
+\node[below = 0cm of bd.south west, anchor=north west] (be) {$\displaystyle\arctanh^\prime(x)=$};
+\node[below = 0cm of be.south west, anchor=north west] (bf) {$\displaystyle\arccoth^\prime(x)=$};
+\node[below = 0cm of bf.south west, anchor=north west] (bg) {$\displaystyle\arcsech^\prime(x)=$};
+\node[below = 0cm of bg.south west, anchor=north west] (bh) {$\displaystyle\arccsch^\prime(x)=$};
+\node[below = 0cm of bh.south west, anchor=north west] (bi) {$\displaystyle\int\sinh(x)\,dx=$};
+\node[below = 0cm of bi.south west, anchor=north west] (bj) {$\displaystyle\int\cosh(x)\,dx=$};
+\node[below = 0cm of bj.south west, anchor=north west] (bk) {$\displaystyle\int\tanh(x)\,dx=$};
+\node[below = 0cm of bk.south west, anchor=north west] (bl) {$\displaystyle\int\coth(x)\,dx=$};
+\node[below = 0cm of bl.south west, anchor=north west] (bm) {$\displaystyle\int\sech(x)\,dx=$};
+\node[below = 0cm of bm.south west, anchor=north west] (bn) {$\displaystyle\int\csch(x)\,dx=$};
+\node[below = 0cm of bn.south west, anchor=north west] (bo) {$\displaystyle\int\arcsinh(x)\,dx=$};
+\node[below = 0cm of bo.south west, anchor=north west] (bp) {$\displaystyle\int\arccosh(x)\,dx=$};
+\node[below = 0cm of bp.south west, anchor=north west] (bq) {$\displaystyle\int\arctanh(x)\,dx=$};
+\node[below = 0cm of bq.south west, anchor=north west] (br) {$\displaystyle\int\arccoth(x)\,dx=$};
+\node[below = 0cm of br.south west, anchor=north west] (bs) {$\displaystyle\int\arcsech(x)\,dx=$};
+\node[below = 0cm of bs.south west, anchor=north west] (bt) {$\displaystyle\int\arccsch(x)\,dx=$};
+
+\end{tikzpicture}
+\end{document}
