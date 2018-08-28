@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://xdptdr.github.io/maths//feed.xml" rel="self" type="application/atom+xml" /><link href="https://xdptdr.github.io/maths//" rel="alternate" type="text/html" /><updated>2018-08-28T15:00:53+02:00</updated><id>https://xdptdr.github.io/maths//</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Derivatives of the trigonometric and hyperbolic functions and their inverses</title><link href="https://xdptdr.github.io/maths//jekyll/update/2018/08/27/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Derivatives of the trigonometric and hyperbolic functions and their inverses" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>https://xdptdr.github.io/maths//jekyll/update/2018/08/27/welcome-to-jekyll</id><content type="html" xml:base="https://xdptdr.github.io/maths//jekyll/update/2018/08/27/welcome-to-jekyll.html">&lt;p&gt;Hi guys.&lt;/p&gt;
+
+&lt;p&gt;In this article, we derive the derivatives of the trigonometric and hyperbolic functions, and their inverses.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\DeclareMathOperator{\arccsch}{arccsch}
+\sinh x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsch x&lt;/script&gt;</content><author><name></name></author><summary type="html">Hi guys.</summary></entry></feed>
