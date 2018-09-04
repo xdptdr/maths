@@ -1,8 +1,319 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://xdptdr.github.io/maths//maths/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xdptdr.github.io/maths//maths/" rel="alternate" type="text/html" /><updated>2018-08-28T15:03:36+02:00</updated><id>https://xdptdr.github.io/maths//maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Derivatives of the trigonometric and hyperbolic functions and their inverses</title><link href="https://xdptdr.github.io/maths//maths/jekyll/update/2018/08/27/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Derivatives of the trigonometric and hyperbolic functions and their inverses" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>https://xdptdr.github.io/maths//maths/jekyll/update/2018/08/27/welcome-to-jekyll</id><content type="html" xml:base="https://xdptdr.github.io/maths//maths/jekyll/update/2018/08/27/welcome-to-jekyll.html">&lt;p&gt;Hi guys.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-04T17:07:13+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Trigonometric functions</title><link href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" rel="alternate" type="text/html" title="Trigonometric functions" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions</id><content type="html" xml:base="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html">&lt;p&gt;Hi guys.&lt;/p&gt;
 
-&lt;p&gt;In this article, we derive the derivatives of the trigonometric and hyperbolic functions, and their inverses.&lt;/p&gt;
+&lt;p&gt;In this article, we present the six usual trigonometric functions, their derivatives, and the derivatives of their inverse.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\DeclareMathOperator{\arccsch}{arccsch}
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccsch}{arccsch}
 \sinh x&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsch x&lt;/script&gt;</content><author><name></name></author><summary type="html">Hi guys.</summary></entry></feed>
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsch x&lt;/script&gt;
+
+&lt;p&gt;Sine and cosine&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sin x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cos x&lt;/script&gt;
+
+&lt;p&gt;Tangent&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan x=\frac{\sin x}\cos{x}&lt;/script&gt;
+
+&lt;p&gt;Cotangent&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cot x=\frac{1}{\tan x}&lt;/script&gt;
+
+&lt;p&gt;Secant&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sec x=\frac{1}{\cos x}&lt;/script&gt;
+
+&lt;p&gt;Cosecant&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\csc x=\frac{1}{\sin x}&lt;/script&gt;
+
+&lt;h2 id=&quot;derivatives&quot;&gt;Derivatives&lt;/h2&gt;
+
+&lt;h3 id=&quot;derivative-of-the-sine&quot;&gt;Derivative of the sine&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sin^\prime x=\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}&lt;/script&gt;
+
+&lt;p&gt;Using &lt;script type=&quot;math/tex&quot;&gt;\sin(a+b)=\sin a\cos b+\cos a\sin b&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sin^\prime x=\lim_{h\to0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}&lt;/script&gt;
+
+&lt;p&gt;Then rearranging&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sin^\prime x=\sin x\left(\lim_{h\to0}\frac{\cos h-1}{h}\right)+\cos x\left(\lim_{h\to0}\frac{\sin h}{h}\right)&lt;/script&gt;
+
+&lt;p&gt;Using &lt;script type=&quot;math/tex&quot;&gt;\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\displaystyle\lim_{x\to0}\frac{\cos x-1}{x}=0&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\sin^\prime x=\cos x$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-cosine&quot;&gt;Derivative of the cosine&lt;/h3&gt;
+
+&lt;p&gt;To compute the derivative of the cosine, we use the identity &lt;script type=&quot;math/tex&quot;&gt;\cos^2 x+\sin^2 x=1&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cos^\prime x=\frac{d\sqrt{1-\sin^2 x}}{dx}&lt;/script&gt;
+
+&lt;p&gt;This is only valid for those &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; for which &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; is positive. Applying the chain rule, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cos^\prime x=\frac{1}{2\sqrt{1-\sin^2 x}}\left(-2\sin x\right)\cos x&lt;/script&gt;
+
+&lt;p&gt;Simplifying, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\cos^\prime x=-\sin x$}&lt;/script&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; is negative, then &lt;script type=&quot;math/tex&quot;&gt;\cos x=-\sqrt{1-\sin^2 x}&lt;/script&gt;, and&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cos^\prime x=-\frac{1}{2\sqrt{1-\sin^2 x}}(-2\sin x)\cos x&lt;/script&gt;
+
+&lt;p&gt;which yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cos^\prime x=-\frac{1}{2(-\cos x)}(-2\sin x)\cos x&lt;/script&gt;
+
+&lt;p&gt;After simplification, we get the same result&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\cos^\prime x=-\sin x$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-tangent&quot;&gt;Derivative of the tangent&lt;/h3&gt;
+
+&lt;p&gt;To derive the tangent, we simply use the derivation of quotients&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan^\prime x=\frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)=\frac{\sin^\prime x\cos x-\sin x\cos^\prime x}{\cos^2 x}=\frac{\cos^2 x+\sin^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}=\sec^2 x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\tan^\prime x=\sec^2 x$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-cotangent&quot;&gt;Derivative of the cotangent&lt;/h3&gt;
+
+&lt;p&gt;To derive the tangent, we use the derivation of the inverse&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cot^\prime x=\frac{d}{dx}\left(\frac{1}{\tan x}\right)=-\tan^\prime x\frac{1}{\tan^2 x}=-\sec^2 x\frac{\cos^2 x}{\sin^2 x}=-\frac{1}{\sin^2 x}=-\csc^2 x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\cot^\prime x=-\csc^2 x$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-secant&quot;&gt;Derivative of the secant&lt;/h3&gt;
+
+&lt;p&gt;To derive the secant, we use the derivation of the inverse&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sec^\prime x=\frac{d}{dx}\left(\frac{1}{\cos x}\right)=-\cos^\prime x\frac{1}{\cos^2 x}=\frac{\sin x}{\cos^2 x}=\sec x\tan x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\sec^\prime x=\sec x\tan x$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-cosecant&quot;&gt;Derivative of the cosecant&lt;/h3&gt;
+
+&lt;p&gt;To derive the cosecant, we use the derivation of the inverse&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\csc^\prime x=\frac{d}{dx}\left(\frac{1}{\sin x}\right)=-\sin^\prime x\frac{1}{\sin^2 x}=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\csc^\prime x=-\csc x\cot x$}&lt;/script&gt;
+
+&lt;h2 id=&quot;derivatives-of-the-inverse-trigonometric-functions&quot;&gt;Derivatives of the inverse trigonometric functions&lt;/h2&gt;
+
+&lt;p&gt;To derive the inverse function, we use the following identity&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left(f^{-1}\right)^\prime(x)=\frac{1}{f^\prime(f^{-1}(x))}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-inverse-sine&quot;&gt;Derivative of the inverse sine&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsin^\prime x=\frac{1}{\sin^\prime(\arcsin x))}=\frac{1}{\cos(\arcsin x))}&lt;/script&gt;
+
+&lt;p&gt;Therefore, when &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; is positive,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsin^\prime (\sin x)=\frac{1}{\cos(\arcsin (\sin x)))}=\frac{1}{\cos x}=\frac{1}{\sqrt{1-\sin^2 x}}&lt;/script&gt;
+
+&lt;p&gt;Substituting &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arcsin^\prime x=\frac{1}{\sqrt{1-x^2}}$}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; is positive from &lt;script type=&quot;math/tex&quot;&gt;-\pi/2&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\pi/2&lt;/script&gt;, but on this interval, &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; goes from &lt;script type=&quot;math/tex&quot;&gt;-1&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;, i.e. &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; spans the whole range of the sine function, which is the whole domain of the inverse sine function.&lt;/p&gt;
+
+&lt;p&gt;Therefore, we do not need to consider the case where &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; is negative because we assume the range of &lt;script type=&quot;math/tex&quot;&gt;\arcsin&lt;/script&gt; to be &lt;script type=&quot;math/tex&quot;&gt;[-\pi/2,\pi/2]&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;derivative-of-the-inverse-cosine&quot;&gt;Derivative of the inverse cosine&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccos^\prime x=\frac{1}{\cos^\prime(\arccos x))}=-\frac{1}{\sin(\arccos x))}&lt;/script&gt;
+
+&lt;p&gt;Therefore, when &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; is positive,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccos^\prime (\cos x)=-\frac{1}{\sin(\arccos (\cos x)))}=-\frac{1}{\sin x}=-\frac{1}{\sqrt{1-\cos^2 x}}&lt;/script&gt;
+
+&lt;p&gt;Substituting &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arccos^\prime x=-\frac{1}{\sqrt{1-x^2}}$}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; is positive on &lt;script type=&quot;math/tex&quot;&gt;[0,\pi]&lt;/script&gt;, and on this interval, &lt;script type=&quot;math/tex&quot;&gt;\cos x&lt;/script&gt; goes from &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;-1&lt;/script&gt;, so we do not need to consider the case where &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; is negative when we define the range of &lt;script type=&quot;math/tex&quot;&gt;\arccos x&lt;/script&gt; to be &lt;script type=&quot;math/tex&quot;&gt;[0,\pi]&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;derivative-of-the-inverse-tangent&quot;&gt;Derivative of the inverse tangent&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arctan^\prime x=\frac{1}{\tan^\prime(\arctan x)}=\frac{1}{\sec^2(\arctan x)}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arctan^\prime (\tan x)=\frac{1}{\sec^2(\arctan (\tan x))}=\frac{1}{\sec^2 x}&lt;/script&gt;
+
+&lt;p&gt;Now, we need to express &lt;script type=&quot;math/tex&quot;&gt;\tan x&lt;/script&gt; as a function of &lt;script type=&quot;math/tex&quot;&gt;\sec^2 x&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan^2 x=\frac{\sin^2 x}{\cos^2 x}=\sec^2 x\sin^2 x=\sec^2 x(1-\cos^2 x)=\sec^2 x\left(1-\frac{1}{\sec^2 x}\right)=\sec^2 x-1&lt;/script&gt;
+
+&lt;p&gt;Which yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sec^2 x=1+\tan^2 x&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arctan^\prime (\tan x)=\frac{1}{\sec^2 x}=\frac{1}{1+\tan^2 x}&lt;/script&gt;
+
+&lt;p&gt;Substituting &lt;script type=&quot;math/tex&quot;&gt;\tan x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arctan^\prime x=\frac{1}{1+x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivative-of-the-inverse-cotangent&quot;&gt;Derivative of the inverse cotangent&lt;/h3&gt;
+
+&lt;p&gt;The computation is quite similar to that of the inverse tangent.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccot^\prime x=\frac{1}{\cot^\prime(\arccot x)}=-\frac{1}{\csc^2(\arccot x)}&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccot^\prime (\cot x)=-\frac{1}{\csc^2(\arccot (\cot x))}=-\frac{1}{\csc^2 x}&lt;/script&gt;
+
+&lt;p&gt;We need to express &lt;script type=&quot;math/tex&quot;&gt;\csc^2 x&lt;/script&gt; as a function of &lt;script type=&quot;math/tex&quot;&gt;\cot x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\cot^2 x=\frac{\cos^2 x}{\sin^2 x}=\csc^2 x\left(1-\frac{1}{\csc^2 x}\right)=\csc^2 x-1&lt;/script&gt;
+
+&lt;p&gt;which yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\csc^2x=1+\cot^2 x&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccot^\prime (\cot x)=-\frac{1}{\csc^2 x}=-\frac{1}{1+\cot^2 x}&lt;/script&gt;
+
+&lt;p&gt;and substituting &lt;script type=&quot;math/tex&quot;&gt;\cot x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arccot^\prime x=-\frac{1}{1+x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;derivation-of-the-inverse-secant&quot;&gt;Derivation of the inverse secant&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsec^\prime x=\frac{1}{\sec^\prime(\arcsec x)}=\frac{1}{\sec(\arcsec x)\tan(\arcsec x)}&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsec^\prime (\sec x)=\frac{1}{\sec(\arcsec (\sec x))\tan(\arcsec (\sec x))}=\frac{1}{\sec x\tan x}&lt;/script&gt;
+
+&lt;p&gt;We need to rewrite &lt;script type=&quot;math/tex&quot;&gt;\sec x\tan x&lt;/script&gt; as a function of &lt;script type=&quot;math/tex&quot;&gt;\sec x&lt;/script&gt; only. Assuming &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; positive,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sec x\tan x=\sec x\frac{\sin x}{\cos x}=\sec^2 x\sin x=\sec^2 x\sqrt{1-\cos^2 x}=\sec^2 x\sqrt{1-\frac{1}{\sec^2 x}}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsec^\prime (\sec x)=\frac{1}{\sec^2 x\sqrt{1-\frac{1}{\sec^2 x}}}&lt;/script&gt;
+
+&lt;p&gt;and substituting &lt;script type=&quot;math/tex&quot;&gt;\sec x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arcsec^\prime x=\frac{1}{x^2 \sqrt{1-\frac{1}{x^2}}}$}&lt;/script&gt;
+
+&lt;p&gt;If we take the range of &lt;script type=&quot;math/tex&quot;&gt;\sec x&lt;/script&gt; to be &lt;script type=&quot;math/tex&quot;&gt;[0,\pi/2]&lt;/script&gt;, then the case &lt;script type=&quot;math/tex&quot;&gt;\sin x&lt;/script&gt; negative never occurs.&lt;/p&gt;
+
+&lt;h3 id=&quot;derivation-of-the-inverse-cosecant&quot;&gt;Derivation of the inverse cosecant&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsc^\prime x=\frac{1}{\csc^\prime(\arccsc x)}=-\frac{1}{\csc(\arccsc x)\cot(\arccsc x)}&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsc^\prime (\csc x)=-\frac{1}{\csc(\arccsc (\csc x))\cot(\arccsc (\csc x))}=-\frac{1}{\csc x\cot x}&lt;/script&gt;
+
+&lt;p&gt;We need to rewrite &lt;script type=&quot;math/tex&quot;&gt;\csc x\cot x&lt;/script&gt; as a function of &lt;script type=&quot;math/tex&quot;&gt;\csc x&lt;/script&gt; only. Assuming &lt;script type=&quot;math/tex&quot;&gt;\csc x&lt;/script&gt; positive,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\csc x\cot x=\csc x\frac{\cos x}{\sin x}=\csc^2 x\cos x=\csc^2 x\sqrt{1-\sin^2 x}=\csc^2 x\sqrt{1-\frac{1}{\csc^2 x}}&lt;/script&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsc^\prime (\csc x)=-\frac{1}{\csc^2 x\sqrt{1-\frac{1}{\csc^2 x}}}&lt;/script&gt;
+
+&lt;p&gt;And substituting &lt;script type=&quot;math/tex&quot;&gt;\csc x&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, we get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\arccsc^\prime x=-\frac{1}{x^2\sqrt{1-\frac{1}{x^2}}}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;So far, we know&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsin^\prime x=\frac{1}{\sqrt{1-x^2}}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccos^\prime x=-\frac{1}{\sqrt{1-x^2}}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arctan^\prime x=\frac{1}{1+x^2}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccot^\prime x=-\frac{1}{1+x^2}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arcsec^\prime x=\frac{1}{x^2 \sqrt{1-\frac{1}{x^2}}}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\arccsc^\prime x=-\frac{1}{x^2\sqrt{1-\frac{1}{x^2}}}&lt;/script&gt;
+
+&lt;h2 id=&quot;primitive-of-the-inverse-trigonometric-functions&quot;&gt;Primitive of the inverse trigonometric functions&lt;/h2&gt;
+
+&lt;p&gt;To compute the primitive of a function, we use the following identity, which we derive using integration by parts&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int f^{-1}(x)dx=x f^{-1}(x)-\int x \left(f^{-1}\right)^\prime(x)dx&lt;/script&gt;
+
+&lt;p&gt;For readability, we omit the integration constant in all the results.&lt;/p&gt;
+
+&lt;h3 id=&quot;primitive-of-the-inverse-sine&quot;&gt;Primitive of the inverse sine&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\arcsin x dx=x\arcsin x-\int x\arcsin^\prime x dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arcsin^\prime x dx=\int\frac{x}{\sqrt{1-x^2}}dx&lt;/script&gt;
+
+&lt;p&gt;With &lt;script type=&quot;math/tex&quot;&gt;u=1-x^2&lt;/script&gt;, we have &lt;script type=&quot;math/tex&quot;&gt;du=-2xdx&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;dx=-\frac{du}{2}&lt;/script&gt;, which yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arcsin^\prime x dx=\int\frac{x}{\sqrt{1-x^2}}dx=-\frac{1}{2}\int\frac{du}{\sqrt{u}}=-\frac{1}{2}\left(\frac{2}{1}\sqrt{u}\right)=-\sqrt{u}=-\sqrt{1-x^2}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\int\arcsin x dx=x\arcsin x+\sqrt{1-x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;primitive-of-the-inverse-cosine&quot;&gt;Primitive of the inverse cosine&lt;/h3&gt;
+
+&lt;p&gt;The computation is very similar to that of the inverse sine.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\arccos x dx=x\arccos x-\int x\arccos^\prime x dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arccos^\prime x dx=-\int\frac{x}{\sqrt{1-x^2}}dx=\sqrt{1-x^2}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\int\arccos x dx=x\arccos x-\sqrt{1-x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;primitive-of-the-inverse-tangent&quot;&gt;Primitive of the inverse tangent&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\arctan x dx=x\arctan x-\int x\arctan^\prime x dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arctan^\prime x dx=\int \frac{x}{1+x^2} dx&lt;/script&gt;
+
+&lt;p&gt;With &lt;script type=&quot;math/tex&quot;&gt;u=1+x^2&lt;/script&gt;, we have &lt;script type=&quot;math/tex&quot;&gt;du=2 x dx&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;x dx=\frac{du}{2}&lt;/script&gt;, which yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int \frac{x}{1+x^2} dx=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|=\frac{1}{2}\ln|1+x^2|=\ln\sqrt{1+x^2}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\int\arctan x dx=x\arctan x-\ln\sqrt{1+x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;primitive-of-the-inverse-cotangent&quot;&gt;Primitive of the inverse cotangent&lt;/h3&gt;
+
+&lt;p&gt;The computation is very similar to that of the inverse tangent.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\arccot x dx=x\arccot x-\int x\arccot^\prime x dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arccot^\prime x dx=-\int\frac{x}{1+x^2}dx=-\ln\sqrt{1+x^2}&lt;/script&gt;
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fbox{$\int\arccot x dx=x\arccot x+\ln\sqrt{1+x^2}$}&lt;/script&gt;
+
+&lt;h3 id=&quot;primitive-of-the-inverse-secant&quot;&gt;Primitive of the inverse secant&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\arcsec x dx=x\arcsec x-\int x\arcsec^\prime x dx&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int x\arcsec^\prime x dx=\int\frac{x}{x^2 \sqrt{1-\frac{1}{x^2}}}dx=\int\frac{1}{x \sqrt{1-\frac{1}{x^2}}}dx&lt;/script&gt;</content><author><name></name></author><summary type="html">Hi guys.</summary></entry></feed>

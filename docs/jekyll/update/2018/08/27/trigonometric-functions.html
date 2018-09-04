@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Trigonometric functions | xdptdr’s maths blog</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Trigonometric functions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi guys." />
+<meta property="og:description" content="Hi guys." />
+<link rel="canonical" href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" />
+<meta property="og:url" content="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" />
+<meta property="og:site_name" content="xdptdr’s maths blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-27T11:08:46+02:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html"},"@type":"BlogPosting","url":"http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html","headline":"Trigonometric functions","dateModified":"2018-08-27T11:08:46+02:00","datePublished":"2018-08-27T11:08:46+02:00","description":"Hi guys.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/maths/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/maths/feed.xml" title="xdptdr's maths blog" /></head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/maths/">xdptdr&#39;s maths blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/maths/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Trigonometric functions</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-27T11:08:46+02:00" itemprop="datePublished">Aug 27, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Hi guys.</p>
+
+<p>In this article, we present the six usual trigonometric functions, their derivatives, and the derivatives of their inverse.</p>
+
+<script type="math/tex; mode=display">\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccsch}{arccsch}
+\sinh x</script>
+
+<script type="math/tex; mode=display">\arccsch x</script>
+
+<p>Sine and cosine</p>
+
+<script type="math/tex; mode=display">\sin x</script>
+
+<script type="math/tex; mode=display">\cos x</script>
+
+<p>Tangent</p>
+
+<script type="math/tex; mode=display">\tan x=\frac{\sin x}\cos{x}</script>
+
+<p>Cotangent</p>
+
+<script type="math/tex; mode=display">\cot x=\frac{1}{\tan x}</script>
+
+<p>Secant</p>
+
+<script type="math/tex; mode=display">\sec x=\frac{1}{\cos x}</script>
+
+<p>Cosecant</p>
+
+<script type="math/tex; mode=display">\csc x=\frac{1}{\sin x}</script>
+
+<h2 id="derivatives">Derivatives</h2>
+
+<h3 id="derivative-of-the-sine">Derivative of the sine</h3>
+
+<script type="math/tex; mode=display">\sin^\prime x=\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}</script>
+
+<p>Using <script type="math/tex">\sin(a+b)=\sin a\cos b+\cos a\sin b</script>, we get</p>
+
+<script type="math/tex; mode=display">\sin^\prime x=\lim_{h\to0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}</script>
+
+<p>Then rearranging</p>
+
+<script type="math/tex; mode=display">\sin^\prime x=\sin x\left(\lim_{h\to0}\frac{\cos h-1}{h}\right)+\cos x\left(\lim_{h\to0}\frac{\sin h}{h}\right)</script>
+
+<p>Using <script type="math/tex">\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1</script> and <script type="math/tex">\displaystyle\lim_{x\to0}\frac{\cos x-1}{x}=0</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\sin^\prime x=\cos x$}</script>
+
+<h3 id="derivative-of-the-cosine">Derivative of the cosine</h3>
+
+<p>To compute the derivative of the cosine, we use the identity <script type="math/tex">\cos^2 x+\sin^2 x=1</script></p>
+
+<script type="math/tex; mode=display">\cos^\prime x=\frac{d\sqrt{1-\sin^2 x}}{dx}</script>
+
+<p>This is only valid for those <script type="math/tex">x</script> for which <script type="math/tex">\cos x</script> is positive. Applying the chain rule, we get</p>
+
+<script type="math/tex; mode=display">\cos^\prime x=\frac{1}{2\sqrt{1-\sin^2 x}}\left(-2\sin x\right)\cos x</script>
+
+<p>Simplifying, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\cos^\prime x=-\sin x$}</script>
+
+<p>If <script type="math/tex">\cos x</script> is negative, then <script type="math/tex">\cos x=-\sqrt{1-\sin^2 x}</script>, and</p>
+
+<script type="math/tex; mode=display">\cos^\prime x=-\frac{1}{2\sqrt{1-\sin^2 x}}(-2\sin x)\cos x</script>
+
+<p>which yields</p>
+
+<script type="math/tex; mode=display">\cos^\prime x=-\frac{1}{2(-\cos x)}(-2\sin x)\cos x</script>
+
+<p>After simplification, we get the same result</p>
+
+<script type="math/tex; mode=display">\fbox{$\cos^\prime x=-\sin x$}</script>
+
+<h3 id="derivative-of-the-tangent">Derivative of the tangent</h3>
+
+<p>To derive the tangent, we simply use the derivation of quotients</p>
+
+<script type="math/tex; mode=display">\tan^\prime x=\frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)=\frac{\sin^\prime x\cos x-\sin x\cos^\prime x}{\cos^2 x}=\frac{\cos^2 x+\sin^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}=\sec^2 x</script>
+
+<script type="math/tex; mode=display">\fbox{$\tan^\prime x=\sec^2 x$}</script>
+
+<h3 id="derivative-of-the-cotangent">Derivative of the cotangent</h3>
+
+<p>To derive the tangent, we use the derivation of the inverse</p>
+
+<script type="math/tex; mode=display">\cot^\prime x=\frac{d}{dx}\left(\frac{1}{\tan x}\right)=-\tan^\prime x\frac{1}{\tan^2 x}=-\sec^2 x\frac{\cos^2 x}{\sin^2 x}=-\frac{1}{\sin^2 x}=-\csc^2 x</script>
+
+<script type="math/tex; mode=display">\fbox{$\cot^\prime x=-\csc^2 x$}</script>
+
+<h3 id="derivative-of-the-secant">Derivative of the secant</h3>
+
+<p>To derive the secant, we use the derivation of the inverse</p>
+
+<script type="math/tex; mode=display">\sec^\prime x=\frac{d}{dx}\left(\frac{1}{\cos x}\right)=-\cos^\prime x\frac{1}{\cos^2 x}=\frac{\sin x}{\cos^2 x}=\sec x\tan x</script>
+
+<script type="math/tex; mode=display">\fbox{$\sec^\prime x=\sec x\tan x$}</script>
+
+<h3 id="derivative-of-the-cosecant">Derivative of the cosecant</h3>
+
+<p>To derive the cosecant, we use the derivation of the inverse</p>
+
+<script type="math/tex; mode=display">\csc^\prime x=\frac{d}{dx}\left(\frac{1}{\sin x}\right)=-\sin^\prime x\frac{1}{\sin^2 x}=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x</script>
+
+<script type="math/tex; mode=display">\fbox{$\csc^\prime x=-\csc x\cot x$}</script>
+
+<h2 id="derivatives-of-the-inverse-trigonometric-functions">Derivatives of the inverse trigonometric functions</h2>
+
+<p>To derive the inverse function, we use the following identity</p>
+
+<script type="math/tex; mode=display">\left(f^{-1}\right)^\prime(x)=\frac{1}{f^\prime(f^{-1}(x))}</script>
+
+<h3 id="derivative-of-the-inverse-sine">Derivative of the inverse sine</h3>
+
+<script type="math/tex; mode=display">\arcsin^\prime x=\frac{1}{\sin^\prime(\arcsin x))}=\frac{1}{\cos(\arcsin x))}</script>
+
+<p>Therefore, when <script type="math/tex">\cos x</script> is positive,</p>
+
+<script type="math/tex; mode=display">\arcsin^\prime (\sin x)=\frac{1}{\cos(\arcsin (\sin x)))}=\frac{1}{\cos x}=\frac{1}{\sqrt{1-\sin^2 x}}</script>
+
+<p>Substituting <script type="math/tex">\sin x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arcsin^\prime x=\frac{1}{\sqrt{1-x^2}}$}</script>
+
+<p><script type="math/tex">\cos x</script> is positive from <script type="math/tex">-\pi/2</script> to <script type="math/tex">\pi/2</script>, but on this interval, <script type="math/tex">\sin x</script> goes from <script type="math/tex">-1</script> to <script type="math/tex">1</script>, i.e. <script type="math/tex">\sin x</script> spans the whole range of the sine function, which is the whole domain of the inverse sine function.</p>
+
+<p>Therefore, we do not need to consider the case where <script type="math/tex">\cos x</script> is negative because we assume the range of <script type="math/tex">\arcsin</script> to be <script type="math/tex">[-\pi/2,\pi/2]</script>.</p>
+
+<h3 id="derivative-of-the-inverse-cosine">Derivative of the inverse cosine</h3>
+
+<script type="math/tex; mode=display">\arccos^\prime x=\frac{1}{\cos^\prime(\arccos x))}=-\frac{1}{\sin(\arccos x))}</script>
+
+<p>Therefore, when <script type="math/tex">\sin x</script> is positive,</p>
+
+<script type="math/tex; mode=display">\arccos^\prime (\cos x)=-\frac{1}{\sin(\arccos (\cos x)))}=-\frac{1}{\sin x}=-\frac{1}{\sqrt{1-\cos^2 x}}</script>
+
+<p>Substituting <script type="math/tex">\cos x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arccos^\prime x=-\frac{1}{\sqrt{1-x^2}}$}</script>
+
+<p><script type="math/tex">\sin x</script> is positive on <script type="math/tex">[0,\pi]</script>, and on this interval, <script type="math/tex">\cos x</script> goes from <script type="math/tex">1</script> to <script type="math/tex">-1</script>, so we do not need to consider the case where <script type="math/tex">\sin x</script> is negative when we define the range of <script type="math/tex">\arccos x</script> to be <script type="math/tex">[0,\pi]</script>.</p>
+
+<h3 id="derivative-of-the-inverse-tangent">Derivative of the inverse tangent</h3>
+
+<script type="math/tex; mode=display">\arctan^\prime x=\frac{1}{\tan^\prime(\arctan x)}=\frac{1}{\sec^2(\arctan x)}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\arctan^\prime (\tan x)=\frac{1}{\sec^2(\arctan (\tan x))}=\frac{1}{\sec^2 x}</script>
+
+<p>Now, we need to express <script type="math/tex">\tan x</script> as a function of <script type="math/tex">\sec^2 x</script></p>
+
+<script type="math/tex; mode=display">\tan^2 x=\frac{\sin^2 x}{\cos^2 x}=\sec^2 x\sin^2 x=\sec^2 x(1-\cos^2 x)=\sec^2 x\left(1-\frac{1}{\sec^2 x}\right)=\sec^2 x-1</script>
+
+<p>Which yields</p>
+
+<script type="math/tex; mode=display">\sec^2 x=1+\tan^2 x</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arctan^\prime (\tan x)=\frac{1}{\sec^2 x}=\frac{1}{1+\tan^2 x}</script>
+
+<p>Substituting <script type="math/tex">\tan x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arctan^\prime x=\frac{1}{1+x^2}$}</script>
+
+<h3 id="derivative-of-the-inverse-cotangent">Derivative of the inverse cotangent</h3>
+
+<p>The computation is quite similar to that of the inverse tangent.</p>
+
+<script type="math/tex; mode=display">\arccot^\prime x=\frac{1}{\cot^\prime(\arccot x)}=-\frac{1}{\csc^2(\arccot x)}</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arccot^\prime (\cot x)=-\frac{1}{\csc^2(\arccot (\cot x))}=-\frac{1}{\csc^2 x}</script>
+
+<p>We need to express <script type="math/tex">\csc^2 x</script> as a function of <script type="math/tex">\cot x</script>.</p>
+
+<script type="math/tex; mode=display">\cot^2 x=\frac{\cos^2 x}{\sin^2 x}=\csc^2 x\left(1-\frac{1}{\csc^2 x}\right)=\csc^2 x-1</script>
+
+<p>which yields</p>
+
+<script type="math/tex; mode=display">\csc^2x=1+\cot^2 x</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arccot^\prime (\cot x)=-\frac{1}{\csc^2 x}=-\frac{1}{1+\cot^2 x}</script>
+
+<p>and substituting <script type="math/tex">\cot x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arccot^\prime x=-\frac{1}{1+x^2}$}</script>
+
+<h3 id="derivation-of-the-inverse-secant">Derivation of the inverse secant</h3>
+
+<script type="math/tex; mode=display">\arcsec^\prime x=\frac{1}{\sec^\prime(\arcsec x)}=\frac{1}{\sec(\arcsec x)\tan(\arcsec x)}</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arcsec^\prime (\sec x)=\frac{1}{\sec(\arcsec (\sec x))\tan(\arcsec (\sec x))}=\frac{1}{\sec x\tan x}</script>
+
+<p>We need to rewrite <script type="math/tex">\sec x\tan x</script> as a function of <script type="math/tex">\sec x</script> only. Assuming <script type="math/tex">\sin x</script> positive,</p>
+
+<script type="math/tex; mode=display">\sec x\tan x=\sec x\frac{\sin x}{\cos x}=\sec^2 x\sin x=\sec^2 x\sqrt{1-\cos^2 x}=\sec^2 x\sqrt{1-\frac{1}{\sec^2 x}}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\arcsec^\prime (\sec x)=\frac{1}{\sec^2 x\sqrt{1-\frac{1}{\sec^2 x}}}</script>
+
+<p>and substituting <script type="math/tex">\sec x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arcsec^\prime x=\frac{1}{x^2 \sqrt{1-\frac{1}{x^2}}}$}</script>
+
+<p>If we take the range of <script type="math/tex">\sec x</script> to be <script type="math/tex">[0,\pi/2]</script>, then the case <script type="math/tex">\sin x</script> negative never occurs.</p>
+
+<h3 id="derivation-of-the-inverse-cosecant">Derivation of the inverse cosecant</h3>
+
+<script type="math/tex; mode=display">\arccsc^\prime x=\frac{1}{\csc^\prime(\arccsc x)}=-\frac{1}{\csc(\arccsc x)\cot(\arccsc x)}</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arccsc^\prime (\csc x)=-\frac{1}{\csc(\arccsc (\csc x))\cot(\arccsc (\csc x))}=-\frac{1}{\csc x\cot x}</script>
+
+<p>We need to rewrite <script type="math/tex">\csc x\cot x</script> as a function of <script type="math/tex">\csc x</script> only. Assuming <script type="math/tex">\csc x</script> positive,</p>
+
+<script type="math/tex; mode=display">\csc x\cot x=\csc x\frac{\cos x}{\sin x}=\csc^2 x\cos x=\csc^2 x\sqrt{1-\sin^2 x}=\csc^2 x\sqrt{1-\frac{1}{\csc^2 x}}</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">\arccsc^\prime (\csc x)=-\frac{1}{\csc^2 x\sqrt{1-\frac{1}{\csc^2 x}}}</script>
+
+<p>And substituting <script type="math/tex">\csc x</script> with <script type="math/tex">x</script>, we get</p>
+
+<script type="math/tex; mode=display">\fbox{$\arccsc^\prime x=-\frac{1}{x^2\sqrt{1-\frac{1}{x^2}}}$}</script>
+
+<h3 id="summary">Summary</h3>
+
+<p>So far, we know</p>
+
+<script type="math/tex; mode=display">\arcsin^\prime x=\frac{1}{\sqrt{1-x^2}}</script>
+
+<script type="math/tex; mode=display">\arccos^\prime x=-\frac{1}{\sqrt{1-x^2}}</script>
+
+<script type="math/tex; mode=display">\arctan^\prime x=\frac{1}{1+x^2}</script>
+
+<script type="math/tex; mode=display">\arccot^\prime x=-\frac{1}{1+x^2}</script>
+
+<script type="math/tex; mode=display">\arcsec^\prime x=\frac{1}{x^2 \sqrt{1-\frac{1}{x^2}}}</script>
+
+<script type="math/tex; mode=display">\arccsc^\prime x=-\frac{1}{x^2\sqrt{1-\frac{1}{x^2}}}</script>
+
+<h2 id="primitive-of-the-inverse-trigonometric-functions">Primitive of the inverse trigonometric functions</h2>
+
+<p>To compute the primitive of a function, we use the following identity, which we derive using integration by parts</p>
+
+<script type="math/tex; mode=display">\int f^{-1}(x)dx=x f^{-1}(x)-\int x \left(f^{-1}\right)^\prime(x)dx</script>
+
+<p>For readability, we omit the integration constant in all the results.</p>
+
+<h3 id="primitive-of-the-inverse-sine">Primitive of the inverse sine</h3>
+
+<script type="math/tex; mode=display">\int\arcsin x dx=x\arcsin x-\int x\arcsin^\prime x dx</script>
+
+<script type="math/tex; mode=display">\int x\arcsin^\prime x dx=\int\frac{x}{\sqrt{1-x^2}}dx</script>
+
+<p>With <script type="math/tex">u=1-x^2</script>, we have <script type="math/tex">du=-2xdx</script> and <script type="math/tex">dx=-\frac{du}{2}</script>, which yields</p>
+
+<script type="math/tex; mode=display">\int x\arcsin^\prime x dx=\int\frac{x}{\sqrt{1-x^2}}dx=-\frac{1}{2}\int\frac{du}{\sqrt{u}}=-\frac{1}{2}\left(\frac{2}{1}\sqrt{u}\right)=-\sqrt{u}=-\sqrt{1-x^2}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\fbox{$\int\arcsin x dx=x\arcsin x+\sqrt{1-x^2}$}</script>
+
+<h3 id="primitive-of-the-inverse-cosine">Primitive of the inverse cosine</h3>
+
+<p>The computation is very similar to that of the inverse sine.</p>
+
+<script type="math/tex; mode=display">\int\arccos x dx=x\arccos x-\int x\arccos^\prime x dx</script>
+
+<script type="math/tex; mode=display">\int x\arccos^\prime x dx=-\int\frac{x}{\sqrt{1-x^2}}dx=\sqrt{1-x^2}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\fbox{$\int\arccos x dx=x\arccos x-\sqrt{1-x^2}$}</script>
+
+<h3 id="primitive-of-the-inverse-tangent">Primitive of the inverse tangent</h3>
+
+<script type="math/tex; mode=display">\int\arctan x dx=x\arctan x-\int x\arctan^\prime x dx</script>
+
+<script type="math/tex; mode=display">\int x\arctan^\prime x dx=\int \frac{x}{1+x^2} dx</script>
+
+<p>With <script type="math/tex">u=1+x^2</script>, we have <script type="math/tex">du=2 x dx</script> and <script type="math/tex">x dx=\frac{du}{2}</script>, which yields</p>
+
+<script type="math/tex; mode=display">\int \frac{x}{1+x^2} dx=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|=\frac{1}{2}\ln|1+x^2|=\ln\sqrt{1+x^2}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\fbox{$\int\arctan x dx=x\arctan x-\ln\sqrt{1+x^2}$}</script>
+
+<h3 id="primitive-of-the-inverse-cotangent">Primitive of the inverse cotangent</h3>
+
+<p>The computation is very similar to that of the inverse tangent.</p>
+
+<script type="math/tex; mode=display">\int\arccot x dx=x\arccot x-\int x\arccot^\prime x dx</script>
+
+<script type="math/tex; mode=display">\int x\arccot^\prime x dx=-\int\frac{x}{1+x^2}dx=-\ln\sqrt{1+x^2}</script>
+
+<p>Therefore,</p>
+
+<script type="math/tex; mode=display">\fbox{$\int\arccot x dx=x\arccot x+\ln\sqrt{1+x^2}$}</script>
+
+<h3 id="primitive-of-the-inverse-secant">Primitive of the inverse secant</h3>
+
+<script type="math/tex; mode=display">\int\arcsec x dx=x\arcsec x-\int x\arcsec^\prime x dx</script>
+
+<script type="math/tex; mode=display">\int x\arcsec^\prime x dx=\int\frac{x}{x^2 \sqrt{1-\frac{1}{x^2}}}dx=\int\frac{1}{x \sqrt{1-\frac{1}{x^2}}}dx</script>
+
+
+  </div><a class="u-url" href="/maths/jekyll/update/2018/08/27/trigonometric-functions.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/maths/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">xdptdr&#39;s maths blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">xdptdr&#39;s maths blog</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/xdptdr"><svg class="svg-icon"><use xlink:href="/maths/assets/minima-social-icons.svg#github"></use></svg> <span class="username">xdptdr</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog about maths</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
