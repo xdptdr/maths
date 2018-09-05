@@ -1,4 +1,331 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-04T17:07:13+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Trigonometric functions</title><link href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" rel="alternate" type="text/html" title="Trigonometric functions" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions</id><content type="html" xml:base="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html">&lt;p&gt;Hi guys.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-05T15:40:27+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Category theory and related domains</title><link href="http://localhost:4000/maths/2018/09/05/category-theory.html" rel="alternate" type="text/html" title="Category theory and related domains" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/category-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/category-theory.html">&lt;h2 id=&quot;category-theory&quot;&gt;Category theory&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Category_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A category is a labeled directed graph, whose nodes are called objects, and whose labelled directed edges are called arrows.
+The arrows are also called morphisms.&lt;/p&gt;
+
+&lt;p&gt;The arrows can be composed associatively.
+There is an identity arrow for each object.&lt;/p&gt;
+
+&lt;p&gt;Sets, rings and groups can be formalized in the language of category theory.&lt;/p&gt;
+
+&lt;p&gt;Category theory was introduced by Samuel Eilenberg and Saunders Mac Lane.
+They defined the concepts of categories, functors, and natural transformations
+They did it in 1942-45.
+They were studying algebraic topology.
+The goal was to understand the processes that preserve mathematical structure.&lt;/p&gt;
+
+&lt;p&gt;Category theory has practical applications in programming language theory.
+The usage of monads in functional programming uses category theory.&lt;/p&gt;
+
+&lt;p&gt;Category theory can be used as an axiomatic foundation for mathematics.&lt;/p&gt;
+
+&lt;p&gt;In the categories of sets, the objects are sets and the arrows are the functions from one set to another.&lt;/p&gt;
+
+&lt;p&gt;In theoretical computer science, there is the category of types and the category of database schemas.&lt;/p&gt;
+
+&lt;p&gt;In mathematical physics, there is the category of vector spaces.&lt;/p&gt;
+
+&lt;p&gt;In linear algebra, there is the categories of matrices.&lt;/p&gt;
+
+&lt;p&gt;Robert Rosen’s metabolism-repair model of autonomous living organisms uses category theory.&lt;/p&gt;
+
+&lt;p&gt;In the category of groups, the objects are groups and the arrows are group homomorphisms.&lt;/p&gt;
+
+&lt;p&gt;In topology, in the category of topological spaces, the objects are topological spaces and the arrows are continuous maps.&lt;/p&gt;
+
+&lt;p&gt;In manifold theory, the arrows are smooth functions.&lt;/p&gt;
+
+&lt;p&gt;In the category of homotopies between pointed topological spaces, the arrows are not structure preserving set functions.&lt;/p&gt;
+
+&lt;p&gt;The theory of allegories replaces functions with relations.&lt;/p&gt;
+
+&lt;p&gt;In the category of categories, the objects are categories and the arrows are functors.&lt;/p&gt;
+
+&lt;p&gt;Diagram chasing is a visual method of arguing with abstract arrows joined in diagrams.&lt;/p&gt;
+
+&lt;p&gt;Functors can dfined categorical diagrams and sequences.&lt;/p&gt;
+
+&lt;p&gt;A functor associates to every object of one category an object from another category, and to every morphism of one category a morphism from another category.&lt;/p&gt;
+
+&lt;p&gt;The idea of the category of categories first surfaced in algebraic topology.&lt;/p&gt;
+
+&lt;p&gt;Some topological questions can be translated into algebraic questions.&lt;/p&gt;
+
+&lt;p&gt;The fundamental group of a topological space can be expressed as functors to the category of groupoids.&lt;/p&gt;
+
+&lt;p&gt;The fundamental groupoid of a topological space can be expressed as functors to the category of groupoids.&lt;/p&gt;
+
+&lt;p&gt;Some diagrammatic or sequential constructions are often naturally related.&lt;/p&gt;
+
+&lt;p&gt;Natural transformations map functors to other functors.&lt;/p&gt;
+
+&lt;p&gt;An arrow between two functors is a natural transformation if it satisfies naturality or commutativity conditions. &lt;script type=&quot;math/tex&quot;&gt;\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\hom}{hom}
+\DeclareMathOperator{\mor}{mor}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; be a category. Its objects are denoted &lt;script type=&quot;math/tex&quot;&gt;\ob(C)&lt;/script&gt; and its arrows are denoted &lt;script type=&quot;math/tex&quot;&gt;\hom(C)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;For &lt;script type=&quot;math/tex&quot;&gt;a\in C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b\in C&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\hom(a,b)&lt;/script&gt; denotes the arrows from &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt;. They can also be denoted &lt;script type=&quot;math/tex&quot;&gt;\hom_C(a,b)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\mor(a,b)&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;C(a,b)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A category theory also has a composition operation &lt;script type=&quot;math/tex&quot;&gt;\circ&lt;/script&gt; which is such that for &lt;script type=&quot;math/tex&quot;&gt;a\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;a\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;c\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f\in\hom(a,b)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g\in\hom(b,c)&lt;/script&gt;,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;g\circ f\in\hom(a,c)&lt;/script&gt;
+
+&lt;p&gt;The composition operation is associative and for each &lt;script type=&quot;math/tex&quot;&gt;a\in\ob(C)&lt;/script&gt;, there is a unique &lt;script type=&quot;math/tex&quot;&gt;1_a\in\hom(a,a)&lt;/script&gt; which is such that for every &lt;script type=&quot;math/tex&quot;&gt;b\in C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f\in\hom(a,b)&lt;/script&gt;,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;1_b\circ f=f=f\circ 1_a&lt;/script&gt;
+
+&lt;p&gt;Relation among arrows are often depicted using commutative diagrams.&lt;/p&gt;
+
+&lt;p&gt;Special morphisms include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;monomorphisms: &lt;script type=&quot;math/tex&quot;&gt;f\circ g_1=f\circ g_2\Rightarrow g_1=g_2&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;epimorphisms: &lt;script type=&quot;math/tex&quot;&gt;g_1\circ f=g_2\circ f\Rightarrow g_1=g_2&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;isomorphisms: There is &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f\circ g=1_b&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g\circ g=1_a&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;endomorphisms: These are those which belong ot &lt;script type=&quot;math/tex&quot;&gt;\hom(a,a)&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;automorphisms: These are the endormorphisms which are also isomorphisms&lt;/li&gt;
+  &lt;li&gt;retractions: If there is &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f\circ g=1_b&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;sections: If there is &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;g\circ f=1_a&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Retractions are a subset of the epimorphisms.&lt;/p&gt;
+
+&lt;p&gt;Sections are a subset of the monomorphisms.&lt;/p&gt;
+
+&lt;p&gt;Isomorphisms are epimorphisms which are also sections.&lt;/p&gt;
+
+&lt;p&gt;Isomorphisms are monomorphisms which are also retractions.&lt;/p&gt;
+
+&lt;p&gt;Functors are arrows in the category of (small) categories.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; be categories.&lt;/p&gt;
+
+&lt;p&gt;A functor &lt;script type=&quot;math/tex&quot;&gt;F:C\to D&lt;/script&gt; from &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; is such that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For each &lt;script type=&quot;math/tex&quot;&gt;x\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;F(x)\in\ob(D)&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Covariance : for each &lt;script type=&quot;math/tex&quot;&gt;a\in\ob(C)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b\in\ob(C)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_C(a,b)&lt;/script&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(f)\in\hom_D(F(a),F(b))&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Contravariance : for each &lt;script type=&quot;math/tex&quot;&gt;a\in\ob(C)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b\in\ob(C)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_C(a,b)&lt;/script&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(f)\in\hom_D(F(b),F(a))&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each &lt;script type=&quot;math/tex&quot;&gt;x\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;F(1_X)=1_{F(X)}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;For &lt;script type=&quot;math/tex&quot;&gt;x\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;y\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;z\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_C(x,y)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;g\in\hom_C(y,z)&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(g\circ f)=F(g)\circ F(f)&lt;/script&gt;
+
+&lt;p&gt;A functor must be either covariant or contravariant.&lt;/p&gt;
+
+&lt;p&gt;A contravariant functor acts as a covariant functor from the opposite category &lt;script type=&quot;math/tex&quot;&gt;C^{\mathrm{op}}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A natural transformation is a relation between two functors.&lt;/p&gt;
+
+&lt;p&gt;Functors describe natural constructions.&lt;/p&gt;
+
+&lt;p&gt;Natural transformations describe natural homomorphisms.&lt;/p&gt;
+
+&lt;p&gt;The fact that two constructions (functors) describe the same result is expressed by a natural isomorphism between the two functors.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; be covariant functors between two categories &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; be a natural transformation from &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;. &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is such that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each &lt;script type=&quot;math/tex&quot;&gt;X\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\eta_X\in\hom_D(F(X),G(X))&lt;/script&gt; and for every &lt;script type=&quot;math/tex&quot;&gt;Y\in\ob(C)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_C(X,Y)&lt;/script&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta_Y\circ F(f)=G(f)\circ\eta_X&lt;/script&gt;
+
+&lt;p&gt;I.e computing in the world of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; then transforming to the world of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is the same as transforming to the world of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; then computing in the world of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Two functors &lt;script type=&quot;math/tex&quot;&gt;F:C\to D&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G:C\to D&lt;/script&gt; are naturally isomorphic if there is a natural tranformation &lt;script type=&quot;math/tex&quot;&gt;\eta:F\to G&lt;/script&gt; such that for all &lt;script type=&quot;math/tex&quot;&gt;x\in\ob(C)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\eta_x&lt;/script&gt; is an isomorphism.&lt;/p&gt;
+
+&lt;p&gt;Categories include sets, groups and topologies.&lt;/p&gt;
+
+&lt;p&gt;Most categories include special objects, and the challenge is to define these special objects using only the concepts of category theory.&lt;/p&gt;
+
+&lt;p&gt;These characterizations define universal properties, which can be applied to any categories.&lt;/p&gt;
+
+&lt;p&gt;The concepts of limits and colimits are central for the definition of universal properties.&lt;/p&gt;
+
+&lt;p&gt;Two categories are equivalent if they are essentially the same.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; be categories. The functor category $D^C$ is the category whose objects are the functros from &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; and the arrows are the natural transformations of these functors.&lt;/p&gt;
+
+&lt;p&gt;The Yodena lemma describes reprentable functors in functor categories.&lt;/p&gt;
+
+&lt;p&gt;For every statement true in a category &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, its dual is true in the dual category &lt;script type=&quot;math/tex&quot;&gt;C^\mathrm{op}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A functor can be left or right adjoint to another functor that maps in the opposite direction.&lt;/p&gt;
+
+&lt;p&gt;A 2-category is a category with objects, morphisms, and morphisms between morphisms.&lt;/p&gt;
+
+&lt;p&gt;This idea can be generalized to &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-categories, and even &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-categories.&lt;/p&gt;
+
+&lt;p&gt;A monoidal category has only one object.&lt;/p&gt;
+
+&lt;p&gt;Higher-dimensional categories require exchange laws to hold.&lt;/p&gt;
+
+&lt;p&gt;Bicategories are a weaker notion of 2-category.&lt;/p&gt;
+
+&lt;p&gt;Higher-dimensional categories are part of higher-dimensional algebra.&lt;/p&gt;
+
+&lt;p&gt;In 1942-45, Samuel Eilenberg and Saunders Mac Lane introduced categories, functors, and natural transformations as part of their work in algebraic topology.&lt;/p&gt;
+
+&lt;p&gt;This allowed the transition from geometric homology to axiomatic homology theory.&lt;/p&gt;
+
+&lt;p&gt;The goal was to understand natural transformations.&lt;/p&gt;
+
+&lt;p&gt;Emmy Noether worked on formalizing abstract processes, and proposed with Mac Lane an axiomatic formalization of the relation between structures and the processes that preserve them.&lt;/p&gt;
+
+&lt;p&gt;The ideas underlying category theory were current in the 1930s in Poland.&lt;/p&gt;
+
+&lt;p&gt;Subsequent developments were powered by&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;computational needs of homological algebra&lt;/li&gt;
+  &lt;li&gt;axiomatic needs of algebraic geometry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;General category theory came later.&lt;/p&gt;
+
+&lt;p&gt;General category theory extends universal algebra.&lt;/p&gt;
+
+&lt;p&gt;General category theory has features allowing semantic flexibility and higher-order logic.&lt;/p&gt;
+
+&lt;p&gt;Topoi are categories which can serve as an alternative to axiomatic set theory as a foundation of mathematics.&lt;/p&gt;
+
+&lt;p&gt;Current work in topoi as a foundation of mathematics aims at justifying constructive mathematics.&lt;/p&gt;
+
+&lt;p&gt;Topos theory is a form of abstract sheaf theory.&lt;/p&gt;
+
+&lt;p&gt;Topos theory leads to pointless topology.&lt;/p&gt;
+
+&lt;p&gt;Categorical logic is based on type theory for intuitionistic logics.&lt;/p&gt;
+
+&lt;p&gt;Categorical logic has applications in functional programming and domain theory.&lt;/p&gt;
+
+&lt;p&gt;A cartesian closed category is taken as a non-syntactic description of a lambda calculus.&lt;/p&gt;
+
+&lt;p&gt;John Baez has a shown a link between Feynman diagrams and monoidal categories.&lt;/p&gt;
+
+&lt;p&gt;Topos theory has been applied to mathematical music theory by Guerino Mazzola.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;domain-theory&quot;&gt;Domain theory&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Domain theory focuses on partially ordered sets with additional properties.&lt;/p&gt;
+
+&lt;p&gt;Partially ordered sets are also called posets.&lt;/p&gt;
+
+&lt;p&gt;The posets with additional properties are called domains.&lt;/p&gt;
+
+&lt;p&gt;Domain theory is a branch of order theory.&lt;/p&gt;
+
+&lt;p&gt;Domain theory is used in computer science to specify denotational semantics of functional programming languages.&lt;/p&gt;
+
+&lt;p&gt;Domain theory formalizes the concepts of approximation and convergence, and has close relations to topology.&lt;/p&gt;
+
+&lt;p&gt;Metric spaces are an alternative approach to denotational semantics.&lt;/p&gt;
+
+&lt;p&gt;The study of domains was initiated by Dana Scott in the late 1960s.&lt;/p&gt;
+
+&lt;p&gt;The goal was a denotational semantics of the lambda calculus.&lt;/p&gt;
+
+&lt;p&gt;Lambda calculus allows the definition of functions, functions which take functions as input and fixed-point combinators.&lt;/p&gt;
+
+&lt;p&gt;The &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; combinator is the most well known fixed-point combinator.&lt;/p&gt;
+
+&lt;p&gt;Fixed-point combinators are such that for any function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f(Y(f))=Y(f)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;To formulate a denotational semantics for lamda calculus, the usual steps involve constructing a model for the lamda calculus, which links the syntactic system to the notational system.&lt;/p&gt;
+
+&lt;p&gt;An example of such a model is the combinator calculus.&lt;/p&gt;
+
+&lt;p&gt;In the combinator calculus, the elements are functions from functions to functions.&lt;/p&gt;
+
+&lt;p&gt;For the elements to be of arbitrary domain and range, there could be only partial functions.&lt;/p&gt;
+
+&lt;p&gt;Scott formalizes the notion of incomplete information to represent computations that have not yet returned a result.&lt;/p&gt;
+
+&lt;p&gt;To each domain of computation, an undefined output is added which represents the result of a computation that never ends.&lt;/p&gt;
+
+&lt;p&gt;The domain of computation is equipped with an ordering relation in which the undefined result is the least element.&lt;/p&gt;
+
+&lt;p&gt;In lambda calculus, the set of functions which have least fixed points, together with an appropriate ordering, is a domain in the sense of the domain theory.&lt;/p&gt;
+
+&lt;p&gt;These domains contain their own function spaces, i.e. all the functions can be applied to themselves.&lt;/p&gt;
+
+&lt;p&gt;The domains of computation are partially ordered, and represents in this way a hierarchy of information.&lt;/p&gt;
+
+&lt;p&gt;Higher elements are more specific and contain more information.&lt;/p&gt;
+
+&lt;p&gt;Lower elements represent incomplete knowledge or intermediate results.&lt;/p&gt;
+
+&lt;p&gt;Computation is modeled by applying monotone functions on elements of the domain to refine a result.&lt;/p&gt;
+
+&lt;p&gt;Reaching a fixed point = finishing the computation.&lt;/p&gt;
+
+&lt;p&gt;Fixed points of monotone functions can be guaranteed to exist, and, with additional restrictions, they can be approximated from below.&lt;/p&gt;
+
+&lt;p&gt;Domains often do not have a greatest element.&lt;/p&gt;
+
+&lt;p&gt;A directed subset is a non-empty subset of the order in which any two elements have an upper bound which is also in the subset.&lt;/p&gt;
+
+&lt;p&gt;Directed subsets can be viewed as consistent specifications.&lt;/p&gt;
+
+&lt;p&gt;Directed subsets can be compared with the notion of convergent sequence in analysis, where each element is more specific than the preceding one.&lt;/p&gt;
+
+&lt;p&gt;In the theory of metric spaces, sequences play a role that is in many aspects analogous to the role of directed sets in domain theory.&lt;/p&gt;
+
+&lt;p&gt;The limit of a directed set is its least upper bound.&lt;/p&gt;
+
+&lt;p&gt;There are directed set with no least upper bound.&lt;/p&gt;
+
+&lt;p&gt;Directed-complete partial orders are orders in which all directed set have a least upper bound, i.e. they are such that all consistent specifications converge.&lt;/p&gt;
+
+&lt;p&gt;There is a least element, which represents the state of no information.&lt;/p&gt;
+
+&lt;p&gt;Scott-continous functions are monotonic functions maps directed sets to directed sets and preserve directed suprema.&lt;/p&gt;
+
+&lt;p&gt;Compact elements cannot be obtained as a limit of a directed set in which they already occur.&lt;/p&gt;
+
+&lt;p&gt;An algebraic poset has a base of compact elements.&lt;/p&gt;
+
+&lt;p&gt;An &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-continous poset has a countable base.&lt;/p&gt;
+
+&lt;p&gt;An  &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-algebraic order has a countable base of finite elements.&lt;/p&gt;
+
+&lt;p&gt;A flat domain is made of incomparable elements with a bottom element which is smaller than all other elements.&lt;/p&gt;
+
+&lt;p&gt;Domains of special interest are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;continuous posets&lt;/li&gt;
+  &lt;li&gt;algebraic posets&lt;/li&gt;
+  &lt;li&gt;continuous cpos&lt;/li&gt;
+  &lt;li&gt;algebraic cpos&lt;/li&gt;
+  &lt;li&gt;continuous lattices&lt;/li&gt;
+  &lt;li&gt;algebraic lattices&lt;/li&gt;
+  &lt;li&gt;Scott domains&lt;/li&gt;
+  &lt;li&gt;SFP-domains&lt;/li&gt;
+  &lt;li&gt;L-domains&lt;/li&gt;
+  &lt;li&gt;bifinite domains&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A poset is a dcpo iff every chain has a supremum.&lt;/p&gt;
+
+&lt;p&gt;Kleene fixed-point theorem : Continuous functions have a least fixed point, which is the least upper bound of all finite iterations of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; on the least element.&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><summary type="html">Category theory</summary></entry><entry><title type="html">Trigonometric functions</title><link href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" rel="alternate" type="text/html" title="Trigonometric functions" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions</id><content type="html" xml:base="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html">&lt;p&gt;Hi guys.&lt;/p&gt;
 
 &lt;p&gt;In this article, we present the six usual trigonometric functions, their derivatives, and the derivatives of their inverse.&lt;/p&gt;
 
