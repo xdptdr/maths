@@ -1,5 +1,5 @@
 (()=>{
-	const namespaces = ['Help','Portal','Special','Talk','Wikipedia','Category'];
+	const namespaces = ['Help','Portal','Special','Talk','Wikipedia','Category','Book','Template','Template_talk'];
 	const a = {};
 	const links = document.getElementsByTagName('a');
 	for(let i=0;i<links.length;++i) {

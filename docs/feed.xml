@@ -1,4 +1,344 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-05T15:40:27+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Category theory and related domains</title><link href="http://localhost:4000/maths/2018/09/05/category-theory.html" rel="alternate" type="text/html" title="Category theory and related domains" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/category-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/category-theory.html">&lt;h2 id=&quot;category-theory&quot;&gt;Category theory&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-05T18:45:41+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Type theory</title><link href="http://localhost:4000/maths/2018/09/05/type-theory.html" rel="alternate" type="text/html" title="Type theory" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/type-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/type-theory.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A type theory is a class of formal systems.&lt;/p&gt;
+
+&lt;p&gt;Some type theories can serve as alternatives to set theory as a foundation of mathematics.&lt;/p&gt;
+
+&lt;p&gt;Type theory is used in mathematics, logic, and computer science.&lt;/p&gt;
+
+&lt;p&gt;In type theory, every term has a type, and operations are restricted to terms of a certain type.&lt;/p&gt;
+
+&lt;p&gt;Type theory is closely related to type systems in programming languages.&lt;/p&gt;
+
+&lt;p&gt;Type theory addresses some paradoxes in some formal logics and some rewrite systems.&lt;/p&gt;
+
+&lt;p&gt;The following type theories can serve as mathematical foundations:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Alonzo Church’s typed &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;-calculus&lt;/li&gt;
+  &lt;li&gt;Per Marin-Löf’s intuitionistic type theory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;history&quot;&gt;History&lt;/h2&gt;
+
+&lt;p&gt;Gottlob Frege’s version of naive set theory is afflicted with Russell’s paradox.&lt;/p&gt;
+
+&lt;p&gt;Russell proposed various theories of type to address the paradox.&lt;/p&gt;
+
+&lt;p&gt;By 1908, Russell had a ramified theory of types with an axiom of reducibility.&lt;/p&gt;
+
+&lt;p&gt;These are featured in Whitehead and Russel’s Principa Mathematica, which was published between 1910 and 1913.&lt;/p&gt;
+
+&lt;p&gt;The idea is to create a hierarchy of types, then assign each mathematical entity to a type.&lt;/p&gt;
+
+&lt;p&gt;New types are built exclusively for already defined types, i.e. there are no recursive or mutually recursive types.&lt;/p&gt;
+
+&lt;p&gt;In 1920s, Leon Chwistek and Frank P. Ramsey propose the theory of simple types, which collapses the hierarchy of types and do not require the axiom of reducibility.&lt;/p&gt;
+
+&lt;p&gt;Type theory is usually used in context with a term rewrite system.&lt;/p&gt;
+
+&lt;p&gt;Alonzo Church’s simply typed lambda calculus is such a rewrite system.&lt;/p&gt;
+
+&lt;p&gt;Church’s theory of types helps the formal system avoid the Kleene-Rosser paradox which afflicts untyped lambda calculus.&lt;/p&gt;
+
+&lt;p&gt;Church’s simply typed lambda calculus was referred to as higher-order logic.&lt;/p&gt;
+
+&lt;p&gt;Per Martin-Löf’s intuitionistic type theory has been the foundation used in some areas of constructive mathematics.&lt;/p&gt;
+
+&lt;p&gt;And also for the proof assistant Agda.&lt;/p&gt;
+
+&lt;p&gt;Thierry Coquand’s calculus of constructions is used by Coq and others.&lt;/p&gt;
+
+&lt;p&gt;Homotopy type theory is an active area of research.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-concepts&quot;&gt;Basic concepts&lt;/h2&gt;
+
+&lt;p&gt;Each term has a type.&lt;/p&gt;
+
+&lt;p&gt;There are conversion rules and reduction rule.&lt;/p&gt;
+
+&lt;p&gt;Functions have a special reduction rule which substitutes the arguments.&lt;/p&gt;
+
+&lt;p&gt;Multiple argument functiosn can be defined using currying.&lt;/p&gt;
+
+&lt;h2 id=&quot;difference-from-set-theory&quot;&gt;Difference from set theory&lt;/h2&gt;
+
+&lt;p&gt;Set theory is built on top of logic, and requires a separate system like predicate logic.&lt;/p&gt;
+
+&lt;p&gt;In type theory, logical concepts can be encoded as types in the theory itself.&lt;/p&gt;
+
+&lt;p&gt;In type theory, terms belong to only one type.&lt;/p&gt;
+
+&lt;p&gt;Set theory encode numbers as sets, type theory encode numbers as functions using Church encoding or as inductive types.&lt;/p&gt;
+
+&lt;p&gt;Set theory allows the set builder notation.&lt;/p&gt;
+
+&lt;p&gt;Type theory is connected to constructive mathematics through the BHK interpretation, and to logic with the Curry Howard isomorphism.&lt;/p&gt;
+
+&lt;p&gt;Some type theories are closely connected to category theory.&lt;/p&gt;
+
+&lt;h2 id=&quot;optional-features&quot;&gt;Optional features&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Normalization&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A system of type theory is strongly normalizing if reductions performed in any order reach a normal form.&lt;/p&gt;
+
+&lt;p&gt;If some order of redutions loop, the system is said to be weakly normalizing.&lt;/p&gt;
+
+&lt;p&gt;Two terms are convertible if they both reduce to another term.&lt;/p&gt;
+
+&lt;p&gt;Confluent and weakly normalizing systems can test if two terms are convertible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dependent types&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Dependent types play a central role in intuitionistic type theory and in the design of functional programming languages such as&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idris&lt;/li&gt;
+  &lt;li&gt;ATS&lt;/li&gt;
+  &lt;li&gt;Agda&lt;/li&gt;
+  &lt;li&gt;Epigram&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Equality types&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Equality is different from convertibility, and is often denoted propositional equality.&lt;/p&gt;
+
+&lt;p&gt;In intuitinstic type theory, the equality type is known as &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt;. A term of type &lt;script type=&quot;math/tex&quot;&gt;I A a b&lt;/script&gt; is interpreted as meaning that &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Although the type &lt;script type=&quot;math/tex&quot;&gt;I nat 3 4&lt;/script&gt; is well defined, there is no term of that type.&lt;/p&gt;
+
+&lt;p&gt;Equality starts with reflexivity : if &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is a term of type &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, then there exists a term of type &lt;script type=&quot;math/tex&quot;&gt;I X x x&lt;/script&gt;. More complicated equalities are created by performing reductions on one side but not on the other. In such a system, the equality type denotes that two values ar convertible by reductions.&lt;/p&gt;
+
+&lt;p&gt;Inequality is usually mapped to the function that sends to the bottom type which has no values, as in the Brouwer-Heyting-Kolmogorov interpretation.&lt;/p&gt;
+
+&lt;p&gt;Homotopy type theory differs from intuitionistic type theory mostly by its handling of the equality type.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Inductive types&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Inductive types are defined with a set of base types and a set of type constructors.&lt;/p&gt;
+
+&lt;p&gt;Certain recursive functions called on inductive types are guaranteed to terminate.&lt;/p&gt;
+
+&lt;p&gt;Coinductive types are infinite data types created with functions that generate the next elements.&lt;/p&gt;
+
+&lt;p&gt;Induction-induction declares an inductive type and a family of types that depend on the inductive type.&lt;/p&gt;
+
+&lt;p&gt;Induction-recursion allows the type and recursive functions operating on it to be defined at the same time.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Universe types&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Many type theories have a universe type, which contains all other types but not itself.&lt;/p&gt;
+
+&lt;p&gt;The type of the universe type is often of another different universe type, leading to a hieararchy of univere types.&lt;/p&gt;
+
+&lt;p&gt;The hiearchy is infinite, but since statements are finite, they can only refer to a finite number of universe levels.&lt;/p&gt;
+
+&lt;p&gt;Type universes are tricky, and some intuitionistic type theories suffered from Girard’s paradox.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Computational component&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Many systems of type theory are also programming languages. Examples include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;simply-typed lambda calculus&lt;/li&gt;
+  &lt;li&gt;intuitionistic type theory&lt;/li&gt;
+  &lt;li&gt;the calculus of constructions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The computation is the reductions of terms using rewriting rules.&lt;/p&gt;
+
+&lt;p&gt;Systems of type theory which have a well-behaved computational component have a simple connection to constructive mathematics through the BHK interpration.&lt;/p&gt;
+
+&lt;p&gt;Non-constructive mathematics can be introduced with operators on continuations, such as call with current continuation, buth they usually break canonicity or parametricity.&lt;/p&gt;
+
+&lt;h2 id=&quot;type-theories&quot;&gt;Type theories&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simply typed lambda calculus&lt;/li&gt;
+  &lt;li&gt;Intuitionistic type theory&lt;/li&gt;
+  &lt;li&gt;System F&lt;/li&gt;
+  &lt;li&gt;LF&lt;/li&gt;
+  &lt;li&gt;Calculus of constructions&lt;/li&gt;
+  &lt;li&gt;Automath&lt;/li&gt;
+  &lt;li&gt;ST type theory&lt;/li&gt;
+  &lt;li&gt;Combinatory logic&lt;/li&gt;
+  &lt;li&gt;Lambda cube&lt;/li&gt;
+  &lt;li&gt;Pure type system&lt;/li&gt;
+  &lt;li&gt;Homotopy type theory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;practical-impact&quot;&gt;Practical impact&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Programming languages&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Static program analysis using type systems has a connection to type theory.&lt;/p&gt;
+
+&lt;p&gt;Agda is a programming language which uses intuitionitic type theory for its type system.&lt;/p&gt;
+
+&lt;p&gt;ML was developed for manipulating type theories.&lt;/p&gt;
+
+&lt;p&gt;ML’s type system was influenced by the type theories developped with ML.&lt;/p&gt;
+
+&lt;p&gt;LCF as something to do with ML.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mathematical foundations&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Automath used type theory to encode mathematics on a computer.
+Martin-Löf developped intuitionistic type theory to encode all mathematics and serve as a new foundation for mathematics.
+Homotopy type theory something something.&lt;/p&gt;
+
+&lt;p&gt;Practitioners of category theory have some difficulties whith Zermelo-Fraenkel set theory.
+Lawvere proposed the Elementary Theory of the Category of Sets (ECTS).
+Homotopy theory something something.
+The connections between dependent types, such as the identity type, and algebraic topoplogy (mainly homotopy) seems interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof assistants&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Most research is driven by proof checkers, assistants, and automated theorem provers.&lt;/p&gt;
+
+&lt;p&gt;LF is used by Twelf.&lt;/p&gt;
+
+&lt;p&gt;Type theories in higher-order logic are used by the HOL family of provers and PVS.&lt;/p&gt;
+
+&lt;p&gt;Intuitinistic type theory is used by Agda.&lt;/p&gt;
+
+&lt;p&gt;Computational type theory is used by NuPRL.&lt;/p&gt;
+
+&lt;p&gt;The calculus of constructions is used by Coq and Matita.&lt;/p&gt;
+
+&lt;p&gt;LEGO and Isabelle support multiple type theories.&lt;/p&gt;
+
+&lt;p&gt;Isable also supports ZFC.&lt;/p&gt;
+
+&lt;p&gt;Mizar only supports set theory.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Linguistics&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Type theory is used in formal theories of semantics of natural languages, such as Montague grammar.&lt;/p&gt;
+
+&lt;p&gt;Categorical grammars and pregroup grammars use type constructors to define the types of words.&lt;/p&gt;
+
+&lt;p&gt;Natural language quantifiers, such as everybody and nobody, are typed as functions from sets of entities to truth-values.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Social sciences&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Gregory Bateson’s notions of double bind and logical level in social sciences is based on Russell’s theory of types.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Relation to category theory&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A category can be interpreted as a type theory by identifying the objects with types (and its arrows as what ?).&lt;/p&gt;
+
+&lt;p&gt;Cartesian closed categories correspond to the typed &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;-calculus.&lt;/p&gt;
+
+&lt;p&gt;C-monoids correspond to untyped &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;-calculus.&lt;/p&gt;
+
+&lt;p&gt;C-monoids are categories with products, exponentials, and a single non-terminal object.&lt;/p&gt;
+
+&lt;p&gt;Locally cartesian closed categories correspond to Martin-Löf type theories.&lt;/p&gt;
+
+&lt;p&gt;These results are part of categorical logic, which study the relationships between type theory and category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wikipedia link</summary></entry><entry><title type="html">Domain theory</title><link href="http://localhost:4000/maths/2018/09/05/domain-theory.html" rel="alternate" type="text/html" title="Domain theory" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/domain-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/domain-theory.html">&lt;h2 id=&quot;domain-theory&quot;&gt;Domain theory&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Domain theory focuses on partially ordered sets with additional properties.&lt;/p&gt;
+
+&lt;p&gt;Partially ordered sets are also called posets.&lt;/p&gt;
+
+&lt;p&gt;The posets with additional properties are called domains.&lt;/p&gt;
+
+&lt;p&gt;Domain theory is a branch of order theory.&lt;/p&gt;
+
+&lt;p&gt;Domain theory is used in computer science to specify denotational semantics of functional programming languages.&lt;/p&gt;
+
+&lt;p&gt;Domain theory formalizes the concepts of approximation and convergence, and has close relations to topology.&lt;/p&gt;
+
+&lt;p&gt;Metric spaces are an alternative approach to denotational semantics.&lt;/p&gt;
+
+&lt;p&gt;The study of domains was initiated by Dana Scott in the late 1960s.&lt;/p&gt;
+
+&lt;p&gt;The goal was a denotational semantics of the lambda calculus.&lt;/p&gt;
+
+&lt;p&gt;Lambda calculus allows the definition of functions, functions which take functions as input and fixed-point combinators.&lt;/p&gt;
+
+&lt;p&gt;The &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; combinator is the most well known fixed-point combinator.&lt;/p&gt;
+
+&lt;p&gt;Fixed-point combinators are such that for any function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f(Y(f))=Y(f)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;To formulate a denotational semantics for lamda calculus, the usual steps involve constructing a model for the lamda calculus, which links the syntactic system to the notational system.&lt;/p&gt;
+
+&lt;p&gt;An example of such a model is the combinator calculus.&lt;/p&gt;
+
+&lt;p&gt;In the combinator calculus, the elements are functions from functions to functions.&lt;/p&gt;
+
+&lt;p&gt;For the elements to be of arbitrary domain and range, there could be only partial functions.&lt;/p&gt;
+
+&lt;p&gt;Scott formalizes the notion of incomplete information to represent computations that have not yet returned a result.&lt;/p&gt;
+
+&lt;p&gt;To each domain of computation, an undefined output is added which represents the result of a computation that never ends.&lt;/p&gt;
+
+&lt;p&gt;The domain of computation is equipped with an ordering relation in which the undefined result is the least element.&lt;/p&gt;
+
+&lt;p&gt;In lambda calculus, the set of functions which have least fixed points, together with an appropriate ordering, is a domain in the sense of the domain theory.&lt;/p&gt;
+
+&lt;p&gt;These domains contain their own function spaces, i.e. all the functions can be applied to themselves.&lt;/p&gt;
+
+&lt;p&gt;The domains of computation are partially ordered, and represents in this way a hierarchy of information.&lt;/p&gt;
+
+&lt;p&gt;Higher elements are more specific and contain more information.&lt;/p&gt;
+
+&lt;p&gt;Lower elements represent incomplete knowledge or intermediate results.&lt;/p&gt;
+
+&lt;p&gt;Computation is modeled by applying monotone functions on elements of the domain to refine a result.&lt;/p&gt;
+
+&lt;p&gt;Reaching a fixed point = finishing the computation.&lt;/p&gt;
+
+&lt;p&gt;Fixed points of monotone functions can be guaranteed to exist, and, with additional restrictions, they can be approximated from below.&lt;/p&gt;
+
+&lt;p&gt;Domains often do not have a greatest element.&lt;/p&gt;
+
+&lt;p&gt;A directed subset is a non-empty subset of the order in which any two elements have an upper bound which is also in the subset.&lt;/p&gt;
+
+&lt;p&gt;Directed subsets can be viewed as consistent specifications.&lt;/p&gt;
+
+&lt;p&gt;Directed subsets can be compared with the notion of convergent sequence in analysis, where each element is more specific than the preceding one.&lt;/p&gt;
+
+&lt;p&gt;In the theory of metric spaces, sequences play a role that is in many aspects analogous to the role of directed sets in domain theory.&lt;/p&gt;
+
+&lt;p&gt;The limit of a directed set is its least upper bound.&lt;/p&gt;
+
+&lt;p&gt;There are directed set with no least upper bound.&lt;/p&gt;
+
+&lt;p&gt;Directed-complete partial orders are orders in which all directed set have a least upper bound, i.e. they are such that all consistent specifications converge.&lt;/p&gt;
+
+&lt;p&gt;There is a least element, which represents the state of no information.&lt;/p&gt;
+
+&lt;p&gt;Scott-continous functions are monotonic functions maps directed sets to directed sets and preserve directed suprema.&lt;/p&gt;
+
+&lt;p&gt;Compact elements cannot be obtained as a limit of a directed set in which they already occur.&lt;/p&gt;
+
+&lt;p&gt;An algebraic poset has a base of compact elements.&lt;/p&gt;
+
+&lt;p&gt;An &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-continous poset has a countable base.&lt;/p&gt;
+
+&lt;p&gt;An  &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-algebraic order has a countable base of finite elements.&lt;/p&gt;
+
+&lt;p&gt;A flat domain is made of incomparable elements with a bottom element which is smaller than all other elements.&lt;/p&gt;
+
+&lt;p&gt;Domains of special interest are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;continuous posets&lt;/li&gt;
+  &lt;li&gt;algebraic posets&lt;/li&gt;
+  &lt;li&gt;continuous cpos&lt;/li&gt;
+  &lt;li&gt;algebraic cpos&lt;/li&gt;
+  &lt;li&gt;continuous lattices&lt;/li&gt;
+  &lt;li&gt;algebraic lattices&lt;/li&gt;
+  &lt;li&gt;Scott domains&lt;/li&gt;
+  &lt;li&gt;SFP-domains&lt;/li&gt;
+  &lt;li&gt;L-domains&lt;/li&gt;
+  &lt;li&gt;bifinite domains&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A poset is a dcpo iff every chain has a supremum.&lt;/p&gt;
+
+&lt;p&gt;Kleene fixed-point theorem : Continuous functions have a least fixed point, which is the least upper bound of all finite iterations of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; on the least element.&lt;/p&gt;</content><author><name></name></author><summary type="html">Domain theory</summary></entry><entry><title type="html">Category theory</title><link href="http://localhost:4000/maths/2018/09/05/category-theory.html" rel="alternate" type="text/html" title="Category theory" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/category-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/category-theory.html">&lt;h2 id=&quot;category-theory&quot;&gt;Category theory&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Category_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
 
@@ -215,117 +555,7 @@ The usage of monads in functional programming uses category theory.&lt;/p&gt;
 
 &lt;p&gt;John Baez has a shown a link between Feynman diagrams and monoidal categories.&lt;/p&gt;
 
-&lt;p&gt;Topos theory has been applied to mathematical music theory by Guerino Mazzola.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;domain-theory&quot;&gt;Domain theory&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Domain theory focuses on partially ordered sets with additional properties.&lt;/p&gt;
-
-&lt;p&gt;Partially ordered sets are also called posets.&lt;/p&gt;
-
-&lt;p&gt;The posets with additional properties are called domains.&lt;/p&gt;
-
-&lt;p&gt;Domain theory is a branch of order theory.&lt;/p&gt;
-
-&lt;p&gt;Domain theory is used in computer science to specify denotational semantics of functional programming languages.&lt;/p&gt;
-
-&lt;p&gt;Domain theory formalizes the concepts of approximation and convergence, and has close relations to topology.&lt;/p&gt;
-
-&lt;p&gt;Metric spaces are an alternative approach to denotational semantics.&lt;/p&gt;
-
-&lt;p&gt;The study of domains was initiated by Dana Scott in the late 1960s.&lt;/p&gt;
-
-&lt;p&gt;The goal was a denotational semantics of the lambda calculus.&lt;/p&gt;
-
-&lt;p&gt;Lambda calculus allows the definition of functions, functions which take functions as input and fixed-point combinators.&lt;/p&gt;
-
-&lt;p&gt;The &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; combinator is the most well known fixed-point combinator.&lt;/p&gt;
-
-&lt;p&gt;Fixed-point combinators are such that for any function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;f(Y(f))=Y(f)&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;To formulate a denotational semantics for lamda calculus, the usual steps involve constructing a model for the lamda calculus, which links the syntactic system to the notational system.&lt;/p&gt;
-
-&lt;p&gt;An example of such a model is the combinator calculus.&lt;/p&gt;
-
-&lt;p&gt;In the combinator calculus, the elements are functions from functions to functions.&lt;/p&gt;
-
-&lt;p&gt;For the elements to be of arbitrary domain and range, there could be only partial functions.&lt;/p&gt;
-
-&lt;p&gt;Scott formalizes the notion of incomplete information to represent computations that have not yet returned a result.&lt;/p&gt;
-
-&lt;p&gt;To each domain of computation, an undefined output is added which represents the result of a computation that never ends.&lt;/p&gt;
-
-&lt;p&gt;The domain of computation is equipped with an ordering relation in which the undefined result is the least element.&lt;/p&gt;
-
-&lt;p&gt;In lambda calculus, the set of functions which have least fixed points, together with an appropriate ordering, is a domain in the sense of the domain theory.&lt;/p&gt;
-
-&lt;p&gt;These domains contain their own function spaces, i.e. all the functions can be applied to themselves.&lt;/p&gt;
-
-&lt;p&gt;The domains of computation are partially ordered, and represents in this way a hierarchy of information.&lt;/p&gt;
-
-&lt;p&gt;Higher elements are more specific and contain more information.&lt;/p&gt;
-
-&lt;p&gt;Lower elements represent incomplete knowledge or intermediate results.&lt;/p&gt;
-
-&lt;p&gt;Computation is modeled by applying monotone functions on elements of the domain to refine a result.&lt;/p&gt;
-
-&lt;p&gt;Reaching a fixed point = finishing the computation.&lt;/p&gt;
-
-&lt;p&gt;Fixed points of monotone functions can be guaranteed to exist, and, with additional restrictions, they can be approximated from below.&lt;/p&gt;
-
-&lt;p&gt;Domains often do not have a greatest element.&lt;/p&gt;
-
-&lt;p&gt;A directed subset is a non-empty subset of the order in which any two elements have an upper bound which is also in the subset.&lt;/p&gt;
-
-&lt;p&gt;Directed subsets can be viewed as consistent specifications.&lt;/p&gt;
-
-&lt;p&gt;Directed subsets can be compared with the notion of convergent sequence in analysis, where each element is more specific than the preceding one.&lt;/p&gt;
-
-&lt;p&gt;In the theory of metric spaces, sequences play a role that is in many aspects analogous to the role of directed sets in domain theory.&lt;/p&gt;
-
-&lt;p&gt;The limit of a directed set is its least upper bound.&lt;/p&gt;
-
-&lt;p&gt;There are directed set with no least upper bound.&lt;/p&gt;
-
-&lt;p&gt;Directed-complete partial orders are orders in which all directed set have a least upper bound, i.e. they are such that all consistent specifications converge.&lt;/p&gt;
-
-&lt;p&gt;There is a least element, which represents the state of no information.&lt;/p&gt;
-
-&lt;p&gt;Scott-continous functions are monotonic functions maps directed sets to directed sets and preserve directed suprema.&lt;/p&gt;
-
-&lt;p&gt;Compact elements cannot be obtained as a limit of a directed set in which they already occur.&lt;/p&gt;
-
-&lt;p&gt;An algebraic poset has a base of compact elements.&lt;/p&gt;
-
-&lt;p&gt;An &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-continous poset has a countable base.&lt;/p&gt;
-
-&lt;p&gt;An  &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;-algebraic order has a countable base of finite elements.&lt;/p&gt;
-
-&lt;p&gt;A flat domain is made of incomparable elements with a bottom element which is smaller than all other elements.&lt;/p&gt;
-
-&lt;p&gt;Domains of special interest are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;continuous posets&lt;/li&gt;
-  &lt;li&gt;algebraic posets&lt;/li&gt;
-  &lt;li&gt;continuous cpos&lt;/li&gt;
-  &lt;li&gt;algebraic cpos&lt;/li&gt;
-  &lt;li&gt;continuous lattices&lt;/li&gt;
-  &lt;li&gt;algebraic lattices&lt;/li&gt;
-  &lt;li&gt;Scott domains&lt;/li&gt;
-  &lt;li&gt;SFP-domains&lt;/li&gt;
-  &lt;li&gt;L-domains&lt;/li&gt;
-  &lt;li&gt;bifinite domains&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A poset is a dcpo iff every chain has a supremum.&lt;/p&gt;
-
-&lt;p&gt;Kleene fixed-point theorem : Continuous functions have a least fixed point, which is the least upper bound of all finite iterations of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; on the least element.&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name></name></author><summary type="html">Category theory</summary></entry><entry><title type="html">Trigonometric functions</title><link href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" rel="alternate" type="text/html" title="Trigonometric functions" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions</id><content type="html" xml:base="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html">&lt;p&gt;Hi guys.&lt;/p&gt;
+&lt;p&gt;Topos theory has been applied to mathematical music theory by Guerino Mazzola.&lt;/p&gt;</content><author><name></name></author><summary type="html">Category theory</summary></entry><entry><title type="html">Trigonometric functions</title><link href="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html" rel="alternate" type="text/html" title="Trigonometric functions" /><published>2018-08-27T11:08:46+02:00</published><updated>2018-08-27T11:08:46+02:00</updated><id>http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions</id><content type="html" xml:base="http://localhost:4000/maths/jekyll/update/2018/08/27/trigonometric-functions.html">&lt;p&gt;Hi guys.&lt;/p&gt;
 
 &lt;p&gt;In this article, we present the six usual trigonometric functions, their derivatives, and the derivatives of their inverse.&lt;/p&gt;
 

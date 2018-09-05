@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Category theory and related domains | xdptdr’s maths blog</title>
+<title>Category theory | xdptdr’s maths blog</title>
 <meta name="generator" content="Jekyll v3.8.3" />
-<meta property="og:title" content="Category theory and related domains" />
+<meta property="og:title" content="Category theory" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Category theory" />
 <meta property="og:description" content="Category theory" />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-05T08:00:00+02:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maths/2018/09/05/category-theory.html"},"@type":"BlogPosting","url":"http://localhost:4000/maths/2018/09/05/category-theory.html","headline":"Category theory and related domains","dateModified":"2018-09-05T08:00:00+02:00","datePublished":"2018-09-05T08:00:00+02:00","description":"Category theory","@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maths/2018/09/05/category-theory.html"},"@type":"BlogPosting","url":"http://localhost:4000/maths/2018/09/05/category-theory.html","headline":"Category theory","dateModified":"2018-09-05T08:00:00+02:00","datePublished":"2018-09-05T08:00:00+02:00","description":"Category theory","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/maths/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/maths/feed.xml" title="xdptdr's maths blog" /></head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -39,7 +39,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Category theory and related domains</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Category theory</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-09-05T08:00:00+02:00" itemprop="datePublished">Sep 5, 2018
       </time></p>
@@ -264,116 +264,6 @@ The usage of monads in functional programming uses category theory.</p>
 <p>John Baez has a shown a link between Feynman diagrams and monoidal categories.</p>
 
 <p>Topos theory has been applied to mathematical music theory by Guerino Mazzola.</p>
-
-<hr />
-
-<h2 id="domain-theory">Domain theory</h2>
-
-<p><a href="https://en.wikipedia.org/wiki/Domain_theory" target="_blank">Wikipedia link</a></p>
-
-<p>Domain theory focuses on partially ordered sets with additional properties.</p>
-
-<p>Partially ordered sets are also called posets.</p>
-
-<p>The posets with additional properties are called domains.</p>
-
-<p>Domain theory is a branch of order theory.</p>
-
-<p>Domain theory is used in computer science to specify denotational semantics of functional programming languages.</p>
-
-<p>Domain theory formalizes the concepts of approximation and convergence, and has close relations to topology.</p>
-
-<p>Metric spaces are an alternative approach to denotational semantics.</p>
-
-<p>The study of domains was initiated by Dana Scott in the late 1960s.</p>
-
-<p>The goal was a denotational semantics of the lambda calculus.</p>
-
-<p>Lambda calculus allows the definition of functions, functions which take functions as input and fixed-point combinators.</p>
-
-<p>The <script type="math/tex">Y</script> combinator is the most well known fixed-point combinator.</p>
-
-<p>Fixed-point combinators are such that for any function <script type="math/tex">f</script>, <script type="math/tex">f(Y(f))=Y(f)</script>.</p>
-
-<p>To formulate a denotational semantics for lamda calculus, the usual steps involve constructing a model for the lamda calculus, which links the syntactic system to the notational system.</p>
-
-<p>An example of such a model is the combinator calculus.</p>
-
-<p>In the combinator calculus, the elements are functions from functions to functions.</p>
-
-<p>For the elements to be of arbitrary domain and range, there could be only partial functions.</p>
-
-<p>Scott formalizes the notion of incomplete information to represent computations that have not yet returned a result.</p>
-
-<p>To each domain of computation, an undefined output is added which represents the result of a computation that never ends.</p>
-
-<p>The domain of computation is equipped with an ordering relation in which the undefined result is the least element.</p>
-
-<p>In lambda calculus, the set of functions which have least fixed points, together with an appropriate ordering, is a domain in the sense of the domain theory.</p>
-
-<p>These domains contain their own function spaces, i.e. all the functions can be applied to themselves.</p>
-
-<p>The domains of computation are partially ordered, and represents in this way a hierarchy of information.</p>
-
-<p>Higher elements are more specific and contain more information.</p>
-
-<p>Lower elements represent incomplete knowledge or intermediate results.</p>
-
-<p>Computation is modeled by applying monotone functions on elements of the domain to refine a result.</p>
-
-<p>Reaching a fixed point = finishing the computation.</p>
-
-<p>Fixed points of monotone functions can be guaranteed to exist, and, with additional restrictions, they can be approximated from below.</p>
-
-<p>Domains often do not have a greatest element.</p>
-
-<p>A directed subset is a non-empty subset of the order in which any two elements have an upper bound which is also in the subset.</p>
-
-<p>Directed subsets can be viewed as consistent specifications.</p>
-
-<p>Directed subsets can be compared with the notion of convergent sequence in analysis, where each element is more specific than the preceding one.</p>
-
-<p>In the theory of metric spaces, sequences play a role that is in many aspects analogous to the role of directed sets in domain theory.</p>
-
-<p>The limit of a directed set is its least upper bound.</p>
-
-<p>There are directed set with no least upper bound.</p>
-
-<p>Directed-complete partial orders are orders in which all directed set have a least upper bound, i.e. they are such that all consistent specifications converge.</p>
-
-<p>There is a least element, which represents the state of no information.</p>
-
-<p>Scott-continous functions are monotonic functions maps directed sets to directed sets and preserve directed suprema.</p>
-
-<p>Compact elements cannot be obtained as a limit of a directed set in which they already occur.</p>
-
-<p>An algebraic poset has a base of compact elements.</p>
-
-<p>An <script type="math/tex">\omega</script>-continous poset has a countable base.</p>
-
-<p>An  <script type="math/tex">\omega</script>-algebraic order has a countable base of finite elements.</p>
-
-<p>A flat domain is made of incomparable elements with a bottom element which is smaller than all other elements.</p>
-
-<p>Domains of special interest are:</p>
-<ul>
-  <li>continuous posets</li>
-  <li>algebraic posets</li>
-  <li>continuous cpos</li>
-  <li>algebraic cpos</li>
-  <li>continuous lattices</li>
-  <li>algebraic lattices</li>
-  <li>Scott domains</li>
-  <li>SFP-domains</li>
-  <li>L-domains</li>
-  <li>bifinite domains</li>
-</ul>
-
-<p>A poset is a dcpo iff every chain has a supremum.</p>
-
-<p>Kleene fixed-point theorem : Continuous functions have a least fixed point, which is the least upper bound of all finite iterations of <script type="math/tex">f</script> on the least element.</p>
-
-<hr />
 
 
   </div><a class="u-url" href="/maths/2018/09/05/category-theory.html" hidden></a>
