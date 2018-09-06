@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Fixed-point combinator | xdptdr’s maths blog</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Fixed-point combinator" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wikipedia link" />
+<meta property="og:description" content="Wikipedia link" />
+<link rel="canonical" href="http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html" />
+<meta property="og:url" content="http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html" />
+<meta property="og:site_name" content="xdptdr’s maths blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-06T08:00:00+02:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html"},"@type":"BlogPosting","url":"http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html","headline":"Fixed-point combinator","dateModified":"2018-09-06T08:00:00+02:00","datePublished":"2018-09-06T08:00:00+02:00","description":"Wikipedia link","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/maths/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/maths/feed.xml" title="xdptdr's maths blog" /></head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/maths/">xdptdr&#39;s maths blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/maths/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fixed-point combinator</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-06T08:00:00+02:00" itemprop="datePublished">Sep 6, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="https://en.wikipedia.org/wiki/Fixed-point_combinator" target="_blank">Wikipedia link</a></p>
+
+<p><script type="math/tex">\DeclareMathOperator{\fix}{fix}</script>Fixed point combinators occurs in combinatory logic in computer science.</p>
+
+<p>A fixed point combinator is a higher-order function.</p>
+
+<p>For any function <script type="math/tex">f</script>, if <script type="math/tex">f</script> has an attractive fixed point, the fixed-point combinator returns the fixed-point of <script type="math/tex">f</script>.</p>
+
+<p>The output of a fixed point combinator is a solution to the equations <script type="math/tex">x=f\,x</script>.</p>
+
+<p>If <script type="math/tex">\fix</script> is a fixed-point combinator, then for any function <script type="math/tex">f</script>, it satisfies the equation <script type="math/tex">\fix f=f(\fix f)</script>.</p>
+
+<p>In lambda calculus, the fixed-point combinator <script type="math/tex">Y</script> is defined as</p>
+
+<script type="math/tex; mode=display">Y=\lambda f.(\lambda x.f(x\,x))(\lambda x.f(x\,x))</script>
+
+<p>The Y combinator can be used to formally defined recursive functions in functional programming.</p>
+
+<p>Curry’s paradox states that untyped lambda calculus is unsound as a deductive system, because the Y combinator allows an anonymous expression to represent zero or many values, which is inconsistent with mathematical logic.</p>
+
+<p>The Y combinator usually does not terminate when applied to a function of one variable.</p>
+
+<p>The Y combinator can be used to implement recursion with functions of two variables, where the second variable can be used as a counter, so that the resulting function behaves like classical loops in imperative programming languages.</p>
+
+<p>In lambda calculus, recursion can only be achieved by passing functions as parameters.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>The fixed point combinator is used in general mathematics, untyped lambda calculus, typed lambda caculus, functional programming and imperative programming.</p>
+
+<p>When the function refers to its parameters ins such way that other calls to the functions are invoked, the computation may never get started.</p>
+
+<p>The type return by the combinator is the type returned by the function being fixed.</p>
+
+<p>In untyped lambda calculus, the function can be expressed using Church encoding, in which case some lambda terms are considered as values defining functions, and performing the computation with beta-reductions yields a lambda term which is the fixed point value.</p>
+
+<p>Mathematicians and programmers interprets fixed-point combinators differently, because mathematicians see expressing satisfying the fixed point equation, while programmers regards it as a way of implementing recursion.</p>
+
+<p><em>Values and domains</em></p>
+
+<p>This expression seems important but makes no sense to me.</p>
+
+<script type="math/tex; mode=display">f\,x=\frac{-1}{x}\land Y\,f=x</script>
+
+<p>Beta-reduction of the lambda terms may loop forever, never reaching a normal form.</p>
+
+<p><em>Function versus implementation</em></p>
+
+<p>Mathematics define functions according to their extensional properties, which means that two functions are equal when they compute the same values.</p>
+
+<p>In programming, function equality is an intensional property, and two different functions (implementations) will be considered as equal in mathematics.</p>
+
+<p>A lambda calulus function is an implementation of a mathematical function.</p>
+
+<p>In lambda calculus, there are several combinators which satisfy the fixed-point equation.</p>
+
+<p><em>What is a combinator</em></p>
+
+<p>Combinator logic is a higher-order function theory.</p>
+
+<p>A combinator is a closed lambda expression.</p>
+
+<p>Combinators may be combined in a number of interesting ways.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>A mathematical definition of the <script type="math/tex">Y</script> combinator is</p>
+
+<script type="math/tex; mode=display">Y\,f=f(Y\,f)</script>
+
+<p>Applied to one-variable, this yields</p>
+
+<script type="math/tex; mode=display">Y\,f\,x=f(Y\,f)\,x</script>
+
+<p><em>The factorial function</em></p>
+
+<script type="math/tex; mode=display">F f n = (\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,(f(\mathrm{pred}\,n)))</script>
+
+<p>Then</p>
+
+<script type="math/tex; mode=display">\fix F\,n = F\,(\fix F)\, n=(\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,((\fix F)\,(\mathrm{pred}\,n)))</script>
+
+<p>Define <script type="math/tex">\mathrm{fact}=\fix F</script> and</p>
+
+<script type="math/tex; mode=display">\mathrm{fact}\,n = F\,(\fix F)\, n=(\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,(\mathrm{fact}\,(\mathrm{pred}\,n)))</script>
+
+<h2 id="fixed-point-combinators-in-lambda-calculus">Fixed point combinators in lambda calculus</h2>
+
+<p>Haskell B. Curry defined the <script type="math/tex">Y</script> combinator as</p>
+
+<script type="math/tex; mode=display">Y=\lambda f.(\lambda x.f(x\, x))\,(\lambda x.f(x\, x))</script>
+
+<p>Beta reduction gives:</p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">Y\,g=\lambda f.(\lambda x.f(x\, x))\,(\lambda x.f(x\, x))\,g</script><br />
+<script type="math/tex">{}</script><script type="math/tex">Y\,g=(\lambda x.g(x\, x))\,(\lambda x.g(x\, x))</script><br />
+<script type="math/tex">{}</script><script type="math/tex">Y\,g=g((\lambda x.g(x\, x))\,(\lambda x.g(x\, x)))</script><br />
+<script type="math/tex">{}</script><script type="math/tex">Y\,g=g(Y\,g)</script></p>
+
+<p><em>Equivalent definition of a fixed-point combinator</em></p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">x=f\, x\land y\,f=x</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\mathrm{let}\,x=f\,x\,\mathrm{in}\,y\,f=x</script>
+<script type="math/tex">{}</script><script type="math/tex">y\,f=\mathrm{let}\,x=f\,x\,\mathrm{in}\,x</script>
+<script type="math/tex">{}</script><script type="math/tex">y=\lambda f.\mathrm{let}\,x=f\,x\mathrm{in}x</script></p>
+
+<p>In the previous, the following relations have been used:</p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">f\,x=y\Leftrightarrow f=\lambda x.y</script><br />
+<script type="math/tex">{}</script><script type="math/tex">(\exists x E\land F)\Leftrightarrow\mathrm{let}\,x\,\colon\,E\,\mathrm{in}\,F</script><br />
+<script type="math/tex">{}</script><script type="math/tex">x\notin\mathrm{FV}(E)\land x\in\mathrm{FV}(F)\rightarrow\mathrm{let}\,x\,\colon\,G\,\mathrm{in}\,E\,F=E(\mathrm{let}\,x\,\colon\,G\,\mathrm{in}\,F)</script><br /></p>
+
+<p>It seems that the language and the symbolism in this section come from various different formalisms.</p>
+
+<p><em>Derivation of the Y combinator</em></p>
+
+<p>Try to make sense of the following.</p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">\lambda f.\mathrm{let}\,x=f\,x\,\mathrm{in}\,x</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.\mathrm{let}\,y\,z=f(y\,z)\,\mathrm{in}\,y\,z</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.\mathrm{let}\,y\,z=f(y\,z)\,\mathrm{in}\,y\,y</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.\mathrm{let}\,y\,z=f(z\,z)\,\mathrm{in}\,y\,y</script><br />
+<script type="math/tex">{}</script><script type="math/tex">f\,x=y\Leftrightarrow f=\lambda x.y</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.\mathrm{let}\,y=\lambda z.f(z z)\,\mathrm{in}\,y\,y</script><br />
+<script type="math/tex">{}</script><script type="math/tex">n\notin\mathrm{FV}(E)\rightarrow(\mathrm{let}\,n=E\,\mathrm{in}\,L\Leftrightarrow(\lambda n.L)\,E)</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.(\lambda y.y\,y)\,(\lambda z.f\,(z\,z))</script><br />
+<script type="math/tex">{}</script><script type="math/tex">\lambda f.(\lambda z.f(z\,z))\,(\lambda z.f\,(z\,z))</script><br /></p>
+
+<p><em>Other fixed-point combinators</em></p>
+
+<p>The set of fixed-point combinators of untyped lambda calculus is recursively enumerable.</p>
+
+<p>In SKI-calculus: <script type="math/tex">Y=S(K(SII))(S(S(KS)K)(K(SII)))</script></p>
+
+<p>John Tromp’s SK-calculus: <script type="math/tex">Y^\prime=SSK(S(K(SS(S(SSK))))K)</script></p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">Y'=(\lambda x.\lambda y.xyx)(\lambda y.\lambda x.y(xyx))</script></p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">X=\lambda f.(\lambda x.xx)(\lambda x.f(xx))</script></p>
+
+<p>Turing fixed-point combinator <script type="math/tex">\Theta=(\lambda x.\lambda y.(y(xxy)))(\lambda x.\lambda y.(y(xxy)))</script></p>
+
+<p><script type="math/tex">{}</script><script type="math/tex">\Theta_v=(\lambda x.\lambda y.(y(\lambda z.xxyz)))(\lambda x.\lambda y.(y(\lambda z.xxyz)))</script></p>
+
+<p>For mutual recursion, there is a poyvariadic fix-point combinator which is denoted <script type="math/tex">Y^\ast</script></p>
+
+<p><em>Strict fixed point combinator</em></p>
+
+<p>The Z combinator work in strict eager languages, where applicative evaluatoin order is applied.</p>
+
+<script type="math/tex; mode=display">Zgv=g(Zg)v</script>
+
+<script type="math/tex; mode=display">Z=\lambda f.(\lambda x.f(\lambda v.xxv))(\lambda x.f(\lambda v.xxv))</script>
+
+<p><em>Non-standard fixed-point combinators</em></p>
+
+<p>Some terms in untyped lambda calculus have the same Böhm tree as fixed point combinator, i.e. they have the same infinite extensions.</p>
+
+<p>Some non-standard fixed-point combinators fail to satisfy the fixed-point equation.</p>
+
+<p>Example: <script type="math/tex">N=BM(B(BM)B)</script> with <script type="math/tex">B=\lambda x,y,z.x(yz)</script> and <script type="math/tex">M=\lambda x.xx</script></p>
+
+<p>The set of non-standard fixed-point combinators is not recursively enumerable.</p>
+
+<h2 id="implementation-in-other-languages">Implementation in other languages</h2>
+
+<p>The structure of the Y combinator is contrained by the limitations of lambda calculus.</p>
+
+<p><em>Lazy functional implementation</em></p>
+
+<p>Haskell allow the definition of fixed points of data constructors with lazy datatypes.</p>
+
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="n">fix</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">a</span>
+<span class="n">fix</span> <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="p">(</span><span class="n">fix</span> <span class="n">f</span><span class="p">)</span></code></pre></figure>
+
+<p><em>Strict functional implementation</em></p>
+
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">let</span> <span class="n">rec</span> <span class="n">fix</span> <span class="n">f</span> <span class="n">x</span> <span class="o">=</span> <span class="n">f</span> <span class="p">(</span><span class="n">fix</span> <span class="n">f</span><span class="p">)</span> <span class="n">x</span></code></pre></figure>
+
+<p><em>Imperative language implementation</em></p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">R</span><span class="p">,</span> <span class="k">typename</span> <span class="n">D</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">fixer</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">R</span> <span class="n">fix</span><span class="p">(</span><span class="n">D</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="k">virtual</span> <span class="n">R</span> <span class="n">f</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">fact</span> <span class="o">:</span> <span class="k">public</span> <span class="n">fixer</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="kt">long</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">virtual</span> <span class="kt">long</span> <span class="n">f</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">fix</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="kt">long</span> <span class="n">result</span> <span class="o">=</span> <span class="n">fact</span><span class="p">().</span><span class="n">fix</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span></code></pre></figure>
+
+<h2 id="typing">Typing</h2>
+
+<p>In polymorphic lambda calculus such as System F, a polymorphic fixed-point combinator has type <script type="math/tex">\forall a.(a\to a)\to a</script> with <script type="math/tex">a</script> a type variable.</p>
+
+<p>An simply typed lambda calculus, fixed-point combinators cannot be typed, and something can be done when extending the calculus with recursive types.</p>
+
+<p>Interesting examples in Haskell and Ocaml omitted.</p>
+
+
+  </div><a class="u-url" href="/maths/2018/09/06/fixed-point_combinator.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/maths/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">xdptdr&#39;s maths blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">xdptdr&#39;s maths blog</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/xdptdr"><svg class="svg-icon"><use xlink:href="/maths/assets/minima-social-icons.svg#github"></use></svg> <span class="username">xdptdr</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog about maths</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

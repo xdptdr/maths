@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Limit (category theory) | xdptdr’s maths blog</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Limit (category theory)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Wikipedia link" />
+<meta property="og:description" content="Wikipedia link" />
+<link rel="canonical" href="http://localhost:4000/maths/2018/09/06/Limit_category_theory.html" />
+<meta property="og:url" content="http://localhost:4000/maths/2018/09/06/Limit_category_theory.html" />
+<meta property="og:site_name" content="xdptdr’s maths blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-06T08:00:00+02:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maths/2018/09/06/Limit_category_theory.html"},"@type":"BlogPosting","url":"http://localhost:4000/maths/2018/09/06/Limit_category_theory.html","headline":"Limit (category theory)","dateModified":"2018-09-06T08:00:00+02:00","datePublished":"2018-09-06T08:00:00+02:00","description":"Wikipedia link","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/maths/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/maths/feed.xml" title="xdptdr's maths blog" /></head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/maths/">xdptdr&#39;s maths blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/maths/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Limit (category theory)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-06T08:00:00+02:00" itemprop="datePublished">Sep 6, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="https://en.wikipedia.org/wiki/Limit_(category_theory)" target="_blank">Wikipedia link</a></p>
+
+<p><script type="math/tex">\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\hom}{hom}</script>In category theory, limits captures essential properties of universal constructions such as products, pullbacks, and inverse limits.</p>
+
+<p>The dual notion of colimit generalizes disjoint unions, direct sums, coproducts, pushouts and direct limits.</p>
+
+<p>Limits exist at the same level of abstraction as universal properties and adjoint functors.</p>
+
+<h2 id="definition">Definition</h2>
+
+<p>A diagram to a category <script type="math/tex">C</script> is a functor <script type="math/tex">F:J\to C</script>, where <script type="math/tex">J</script> is an index category.</p>
+
+<p>A diagram is small when <script type="math/tex">J</script> is small.</p>
+
+<p>A diagrma is finite when <script type="math/tex">J</script> is finite.</p>
+
+<p><em>Limits</em></p>
+
+<p>Let <script type="math/tex">F:J\to C</script> be a diagram from <script type="math/tex">J</script> to a category <script type="math/tex">C</script>.</p>
+
+<p>A cone to <script type="math/tex">F</script> is an object <script type="math/tex">N\in\ob(C)</script> with a family <script type="math/tex">\psi_X:N\to F(X)</script> of arrows indexed by <script type="math/tex">X=\ob{J}</script> such that for every arrow <script type="math/tex">f\in\hom_J(X,Y)</script>, <script type="math/tex">F(f)\circ\psi_X=\psi_Y</script></p>
+
+<p>A limit of <script type="math/tex">F:J\to C</script> is a cone <script type="math/tex">(L,\varphi)</script> to <script type="math/tex">F</script> such that for any other cone <script type="math/tex">(N,\psi)</script> to <script type="math/tex">F</script>, there’s a unique arrow <script type="math/tex">u:N\to L</script> such that for all <script type="math/tex">X\in\ob(J)</script>, <script type="math/tex">\varphi_X\circ u=\psi_X</script></p>
+
+<p>In other words, the cone <script type="math/tex">(N,\psi)</script> factors throught the cone <script type="math/tex">(L,\varphi)</script> with the unique factorization <script type="math/tex">u</script>, which is called the mediating arrow.</p>
+
+<p>Limits are referred to as universal cones, because they are characterized by a universal property.</p>
+
+<p>A limit allows any other cone to factory through it, but is sufficiently specific that only one factorization is possible for every cone.</p>
+
+<p>Limits are the terminal objects in the category of cones to <script type="math/tex">F</script>.</p>
+
+<p>Some diagrams may not have a limit, but when a diagram does have a limit, it is unique up to isomorphism.</p>
+
+<p><em>Colimits</em></p>
+
+<p>A co-cone of a diagram <script type="math/tex">F:J\to C</script> is an object <script type="math/tex">N\in\ob(C)</script> with a family of arrows <script type="math/tex">\psi_X\in\hom_C(F(X),N)</script> for every <script type="math/tex">X\in\ob(J)</script> such that for every <script type="math/tex">Y\in\ob(J)</script> and <script type="math/tex">f\in\hom_J(X,Y)</script>, <script type="math/tex">\psi_Y\circ F(f)=\psi_X</script></p>
+
+<p>A colimit of <script type="math/tex">F:J\to C</script> is a co-cone <script type="math/tex">(L,\varphi)</script> of <script type="math/tex">F</script> such that for every other co-cone <script type="math/tex">(N,\psi)</script> of <script type="math/tex">F</script>, there is a unique <script type="math/tex">u\in\hom_C(L,N)</script> such that <script type="math/tex">u\circ\phi_X=\psi_X</script> for all <script type="math/tex">X\in\ob(J)</script>.</p>
+
+<p>Colimits are universal co-cones, which are the inital objects of the category of co-cones from <script type="math/tex">F</script>, and are unique up to isomorphism.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p><em>Limits</em></p>
+
+<p>If J is the empty category, there is only one diagram of shape J. A cone to the empty diagram is essentially just an object from <script type="math/tex">C</script>. The limit of <script type="math/tex">F</script> is an object that is uniquely factored through by every other object. Such an object is a terminal object.</p>
+
+<p>If J is a discrete category, then the diagram is a family of objects of <script type="math/tex">C</script>, and the limit is called the product of these objects. The cone contains the projections of the product. If the diagram is to a constant functor, the limit is the <script type="math/tex">J</script>th power.</p>
+
+<p>If <script type="math/tex">J</script> has two objects <script type="math/tex">a</script> and <script type="math/tex">b</script> and two arrows <script type="math/tex">a\to b</script> and <script type="math/tex">b\to a</script>, the limit is the equalizer of two parallel arrows in <script type="math/tex">C</script>.</p>
+
+<p>If one of the arrow is the zero morphism, the equalizer is a kernel.</p>
+
+<p>Let <script type="math/tex">F</script> be a digram which picks out three objects <script type="math/tex">X</script>, <script type="math/tex">Y</script> and <script type="math/tex">Z</script> in <script type="math/tex">C</script>, with morphisms <script type="math/tex">f:X\to Z</script> and <script type="math/tex">g:Y\to Z</script>. Then the limit of F is a pullback or a fiber product.</p>
+
+<p>If <script type="math/tex">J</script> is a directed set and <script type="math/tex">F:J^\mathrm{op}\to C</script> is a diagram, the limit is the inverse limit or projective limit.</p>
+
+<p>If $J$ has an initial object <script type="math/tex">i</script>, the limit is an object isomorphic to <script type="math/tex">F(i)</script></p>
+
+<p>Limits of functions are special case of limits of filters.</p>
+
+<p>Let <script type="math/tex">X</script> be a topological space <script type="math/tex">X</script>. <script type="math/tex">F</script> the set of filters on <script type="math/tex">X</script>, <script type="math/tex">x\in X</script> a point, <script type="math/tex">V(x)\in F</script> the neighborhood filter of <script type="math/tex">x</script>, <script type="math/tex">A\in F</script> a particular filter and <script type="math/tex">F_{x,A}=\{G\in F\mid V(x)\cup A\subset G\}</script> the set of filters finer than <script type="math/tex">A</script> and that converge to <script type="math/tex">x</script>.</p>
+
+<p>Make <script type="math/tex">F</script> a small and thin category by adding an arrow <script type="math/tex">A\to B</script> if and only if <script type="math/tex">A\subseteq B</script>.</p>
+
+<p>Then injection <script type="math/tex">I_{x,A}:F_{x,A}\to F</script> is a functor and the following equivalence holds:</p>
+
+<p><script type="math/tex">x</script> is a topological limit of <script type="math/tex">A</script> iff <script type="math/tex">A</script> is a categorical limit of <script type="math/tex">I_{x,A}</script>.</p>
+
+<p><em>Colimits</em></p>
+
+<p>Initial objects are colimits of empty diagrams.</p>
+
+<p>Coproducts are colimits of diagrams indexed by discrete categories.</p>
+
+<p>Copowers are colimits of constant diagrams from discrete categories.</p>
+
+<p>Coequalizers are colimits of parallel pairs of morphisms.</p>
+
+<p>Cokernels are coequalizers of a morphism and a parallel zero morphism.</p>
+
+<p>Pushouts are colimits of a pair of morphism with common domain.</p>
+
+<p>Direct limits are colimits of diagrams indexed by directed sets.</p>
+
+<h2 id="properties">Properties</h2>
+
+<p><em>Existence of limits</em></p>
+
+<p>TODO…</p>
+
+
+  </div><a class="u-url" href="/maths/2018/09/06/Limit_category_theory.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/maths/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">xdptdr&#39;s maths blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">xdptdr&#39;s maths blog</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/xdptdr"><svg class="svg-icon"><use xlink:href="/maths/assets/minima-social-icons.svg#github"></use></svg> <span class="username">xdptdr</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog about maths</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,4 +1,297 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-05T18:45:41+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Type theory</title><link href="http://localhost:4000/maths/2018/09/05/type-theory.html" rel="alternate" type="text/html" title="Type theory" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/type-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/type-theory.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/maths/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/maths/" rel="alternate" type="text/html" /><updated>2018-09-06T14:05:34+02:00</updated><id>http://localhost:4000/maths/</id><title type="html">xdptdr’s maths blog</title><subtitle>A blog about maths</subtitle><entry><title type="html">Fixed-point combinator</title><link href="http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html" rel="alternate" type="text/html" title="Fixed-point combinator" /><published>2018-09-06T08:00:00+02:00</published><updated>2018-09-06T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/06/fixed-point_combinator</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/06/fixed-point_combinator.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fixed-point_combinator&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\DeclareMathOperator{\fix}{fix}&lt;/script&gt;Fixed point combinators occurs in combinatory logic in computer science.&lt;/p&gt;
+
+&lt;p&gt;A fixed point combinator is a higher-order function.&lt;/p&gt;
+
+&lt;p&gt;For any function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; has an attractive fixed point, the fixed-point combinator returns the fixed-point of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The output of a fixed point combinator is a solution to the equations &lt;script type=&quot;math/tex&quot;&gt;x=f\,x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;\fix&lt;/script&gt; is a fixed-point combinator, then for any function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;, it satisfies the equation &lt;script type=&quot;math/tex&quot;&gt;\fix f=f(\fix f)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;In lambda calculus, the fixed-point combinator &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; is defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y=\lambda f.(\lambda x.f(x\,x))(\lambda x.f(x\,x))&lt;/script&gt;
+
+&lt;p&gt;The Y combinator can be used to formally defined recursive functions in functional programming.&lt;/p&gt;
+
+&lt;p&gt;Curry’s paradox states that untyped lambda calculus is unsound as a deductive system, because the Y combinator allows an anonymous expression to represent zero or many values, which is inconsistent with mathematical logic.&lt;/p&gt;
+
+&lt;p&gt;The Y combinator usually does not terminate when applied to a function of one variable.&lt;/p&gt;
+
+&lt;p&gt;The Y combinator can be used to implement recursion with functions of two variables, where the second variable can be used as a counter, so that the resulting function behaves like classical loops in imperative programming languages.&lt;/p&gt;
+
+&lt;p&gt;In lambda calculus, recursion can only be achieved by passing functions as parameters.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The fixed point combinator is used in general mathematics, untyped lambda calculus, typed lambda caculus, functional programming and imperative programming.&lt;/p&gt;
+
+&lt;p&gt;When the function refers to its parameters ins such way that other calls to the functions are invoked, the computation may never get started.&lt;/p&gt;
+
+&lt;p&gt;The type return by the combinator is the type returned by the function being fixed.&lt;/p&gt;
+
+&lt;p&gt;In untyped lambda calculus, the function can be expressed using Church encoding, in which case some lambda terms are considered as values defining functions, and performing the computation with beta-reductions yields a lambda term which is the fixed point value.&lt;/p&gt;
+
+&lt;p&gt;Mathematicians and programmers interprets fixed-point combinators differently, because mathematicians see expressing satisfying the fixed point equation, while programmers regards it as a way of implementing recursion.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Values and domains&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This expression seems important but makes no sense to me.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f\,x=\frac{-1}{x}\land Y\,f=x&lt;/script&gt;
+
+&lt;p&gt;Beta-reduction of the lambda terms may loop forever, never reaching a normal form.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Function versus implementation&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Mathematics define functions according to their extensional properties, which means that two functions are equal when they compute the same values.&lt;/p&gt;
+
+&lt;p&gt;In programming, function equality is an intensional property, and two different functions (implementations) will be considered as equal in mathematics.&lt;/p&gt;
+
+&lt;p&gt;A lambda calulus function is an implementation of a mathematical function.&lt;/p&gt;
+
+&lt;p&gt;In lambda calculus, there are several combinators which satisfy the fixed-point equation.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What is a combinator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Combinator logic is a higher-order function theory.&lt;/p&gt;
+
+&lt;p&gt;A combinator is a closed lambda expression.&lt;/p&gt;
+
+&lt;p&gt;Combinators may be combined in a number of interesting ways.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;A mathematical definition of the &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; combinator is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y\,f=f(Y\,f)&lt;/script&gt;
+
+&lt;p&gt;Applied to one-variable, this yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y\,f\,x=f(Y\,f)\,x&lt;/script&gt;
+
+&lt;p&gt;&lt;em&gt;The factorial function&lt;/em&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F f n = (\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,(f(\mathrm{pred}\,n)))&lt;/script&gt;
+
+&lt;p&gt;Then&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\fix F\,n = F\,(\fix F)\, n=(\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,((\fix F)\,(\mathrm{pred}\,n)))&lt;/script&gt;
+
+&lt;p&gt;Define &lt;script type=&quot;math/tex&quot;&gt;\mathrm{fact}=\fix F&lt;/script&gt; and&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{fact}\,n = F\,(\fix F)\, n=(\mathrm{IsZero}\,n)\,1\,(\mathrm{multiply}\,n\,(\mathrm{fact}\,(\mathrm{pred}\,n)))&lt;/script&gt;
+
+&lt;h2 id=&quot;fixed-point-combinators-in-lambda-calculus&quot;&gt;Fixed point combinators in lambda calculus&lt;/h2&gt;
+
+&lt;p&gt;Haskell B. Curry defined the &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; combinator as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Y=\lambda f.(\lambda x.f(x\, x))\,(\lambda x.f(x\, x))&lt;/script&gt;
+
+&lt;p&gt;Beta reduction gives:&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;Y\,g=\lambda f.(\lambda x.f(x\, x))\,(\lambda x.f(x\, x))\,g&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;Y\,g=(\lambda x.g(x\, x))\,(\lambda x.g(x\, x))&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;Y\,g=g((\lambda x.g(x\, x))\,(\lambda x.g(x\, x)))&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;Y\,g=g(Y\,g)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Equivalent definition of a fixed-point combinator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;x=f\, x\land y\,f=x&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{let}\,x=f\,x\,\mathrm{in}\,y\,f=x&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;y\,f=\mathrm{let}\,x=f\,x\,\mathrm{in}\,x&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;y=\lambda f.\mathrm{let}\,x=f\,x\mathrm{in}x&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In the previous, the following relations have been used:&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;f\,x=y\Leftrightarrow f=\lambda x.y&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;(\exists x E\land F)\Leftrightarrow\mathrm{let}\,x\,\colon\,E\,\mathrm{in}\,F&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;x\notin\mathrm{FV}(E)\land x\in\mathrm{FV}(F)\rightarrow\mathrm{let}\,x\,\colon\,G\,\mathrm{in}\,E\,F=E(\mathrm{let}\,x\,\colon\,G\,\mathrm{in}\,F)&lt;/script&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems that the language and the symbolism in this section come from various different formalisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Derivation of the Y combinator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Try to make sense of the following.&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.\mathrm{let}\,x=f\,x\,\mathrm{in}\,x&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.\mathrm{let}\,y\,z=f(y\,z)\,\mathrm{in}\,y\,z&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.\mathrm{let}\,y\,z=f(y\,z)\,\mathrm{in}\,y\,y&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.\mathrm{let}\,y\,z=f(z\,z)\,\mathrm{in}\,y\,y&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;f\,x=y\Leftrightarrow f=\lambda x.y&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.\mathrm{let}\,y=\lambda z.f(z z)\,\mathrm{in}\,y\,y&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;n\notin\mathrm{FV}(E)\rightarrow(\mathrm{let}\,n=E\,\mathrm{in}\,L\Leftrightarrow(\lambda n.L)\,E)&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.(\lambda y.y\,y)\,(\lambda z.f\,(z\,z))&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda f.(\lambda z.f(z\,z))\,(\lambda z.f\,(z\,z))&lt;/script&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Other fixed-point combinators&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The set of fixed-point combinators of untyped lambda calculus is recursively enumerable.&lt;/p&gt;
+
+&lt;p&gt;In SKI-calculus: &lt;script type=&quot;math/tex&quot;&gt;Y=S(K(SII))(S(S(KS)K)(K(SII)))&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;John Tromp’s SK-calculus: &lt;script type=&quot;math/tex&quot;&gt;Y^\prime=SSK(S(K(SS(S(SSK))))K)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;Y'=(\lambda x.\lambda y.xyx)(\lambda y.\lambda x.y(xyx))&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;X=\lambda f.(\lambda x.xx)(\lambda x.f(xx))&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Turing fixed-point combinator &lt;script type=&quot;math/tex&quot;&gt;\Theta=(\lambda x.\lambda y.(y(xxy)))(\lambda x.\lambda y.(y(xxy)))&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{}&lt;/script&gt;&lt;script type=&quot;math/tex&quot;&gt;\Theta_v=(\lambda x.\lambda y.(y(\lambda z.xxyz)))(\lambda x.\lambda y.(y(\lambda z.xxyz)))&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;For mutual recursion, there is a poyvariadic fix-point combinator which is denoted &lt;script type=&quot;math/tex&quot;&gt;Y^\ast&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Strict fixed point combinator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The Z combinator work in strict eager languages, where applicative evaluatoin order is applied.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Zgv=g(Zg)v&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Z=\lambda f.(\lambda x.f(\lambda v.xxv))(\lambda x.f(\lambda v.xxv))&lt;/script&gt;
+
+&lt;p&gt;&lt;em&gt;Non-standard fixed-point combinators&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Some terms in untyped lambda calculus have the same Böhm tree as fixed point combinator, i.e. they have the same infinite extensions.&lt;/p&gt;
+
+&lt;p&gt;Some non-standard fixed-point combinators fail to satisfy the fixed-point equation.&lt;/p&gt;
+
+&lt;p&gt;Example: &lt;script type=&quot;math/tex&quot;&gt;N=BM(B(BM)B)&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;B=\lambda x,y,z.x(yz)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;M=\lambda x.xx&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The set of non-standard fixed-point combinators is not recursively enumerable.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementation-in-other-languages&quot;&gt;Implementation in other languages&lt;/h2&gt;
+
+&lt;p&gt;The structure of the Y combinator is contrained by the limitations of lambda calculus.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Lazy functional implementation&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Haskell allow the definition of fixed points of data constructors with lazy datatypes.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Strict functional implementation&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rec&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Imperative language implementation&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typename&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;fixer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;fact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;typing&quot;&gt;Typing&lt;/h2&gt;
+
+&lt;p&gt;In polymorphic lambda calculus such as System F, a polymorphic fixed-point combinator has type &lt;script type=&quot;math/tex&quot;&gt;\forall a.(a\to a)\to a&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; a type variable.&lt;/p&gt;
+
+&lt;p&gt;An simply typed lambda calculus, fixed-point combinators cannot be typed, and something can be done when extending the calculus with recursive types.&lt;/p&gt;
+
+&lt;p&gt;Interesting examples in Haskell and Ocaml omitted.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wikipedia link</summary></entry><entry><title type="html">Limit (category theory)</title><link href="http://localhost:4000/maths/2018/09/06/Limit_category_theory.html" rel="alternate" type="text/html" title="Limit (category theory)" /><published>2018-09-06T08:00:00+02:00</published><updated>2018-09-06T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/06/Limit_category_theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/06/Limit_category_theory.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Limit_(category_theory)&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\hom}{hom}&lt;/script&gt;In category theory, limits captures essential properties of universal constructions such as products, pullbacks, and inverse limits.&lt;/p&gt;
+
+&lt;p&gt;The dual notion of colimit generalizes disjoint unions, direct sums, coproducts, pushouts and direct limits.&lt;/p&gt;
+
+&lt;p&gt;Limits exist at the same level of abstraction as universal properties and adjoint functors.&lt;/p&gt;
+
+&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+
+&lt;p&gt;A diagram to a category &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is a functor &lt;script type=&quot;math/tex&quot;&gt;F:J\to C&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; is an index category.&lt;/p&gt;
+
+&lt;p&gt;A diagram is small when &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; is small.&lt;/p&gt;
+
+&lt;p&gt;A diagrma is finite when &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; is finite.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Limits&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;F:J\to C&lt;/script&gt; be a diagram from &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; to a category &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;A cone to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is an object &lt;script type=&quot;math/tex&quot;&gt;N\in\ob(C)&lt;/script&gt; with a family &lt;script type=&quot;math/tex&quot;&gt;\psi_X:N\to F(X)&lt;/script&gt; of arrows indexed by &lt;script type=&quot;math/tex&quot;&gt;X=\ob{J}&lt;/script&gt; such that for every arrow &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_J(X,Y)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;F(f)\circ\psi_X=\psi_Y&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A limit of &lt;script type=&quot;math/tex&quot;&gt;F:J\to C&lt;/script&gt; is a cone &lt;script type=&quot;math/tex&quot;&gt;(L,\varphi)&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; such that for any other cone &lt;script type=&quot;math/tex&quot;&gt;(N,\psi)&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;, there’s a unique arrow &lt;script type=&quot;math/tex&quot;&gt;u:N\to L&lt;/script&gt; such that for all &lt;script type=&quot;math/tex&quot;&gt;X\in\ob(J)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\varphi_X\circ u=\psi_X&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In other words, the cone &lt;script type=&quot;math/tex&quot;&gt;(N,\psi)&lt;/script&gt; factors throught the cone &lt;script type=&quot;math/tex&quot;&gt;(L,\varphi)&lt;/script&gt; with the unique factorization &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt;, which is called the mediating arrow.&lt;/p&gt;
+
+&lt;p&gt;Limits are referred to as universal cones, because they are characterized by a universal property.&lt;/p&gt;
+
+&lt;p&gt;A limit allows any other cone to factory through it, but is sufficiently specific that only one factorization is possible for every cone.&lt;/p&gt;
+
+&lt;p&gt;Limits are the terminal objects in the category of cones to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some diagrams may not have a limit, but when a diagram does have a limit, it is unique up to isomorphism.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Colimits&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A co-cone of a diagram &lt;script type=&quot;math/tex&quot;&gt;F:J\to C&lt;/script&gt; is an object &lt;script type=&quot;math/tex&quot;&gt;N\in\ob(C)&lt;/script&gt; with a family of arrows &lt;script type=&quot;math/tex&quot;&gt;\psi_X\in\hom_C(F(X),N)&lt;/script&gt; for every &lt;script type=&quot;math/tex&quot;&gt;X\in\ob(J)&lt;/script&gt; such that for every &lt;script type=&quot;math/tex&quot;&gt;Y\in\ob(J)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f\in\hom_J(X,Y)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\psi_Y\circ F(f)=\psi_X&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A colimit of &lt;script type=&quot;math/tex&quot;&gt;F:J\to C&lt;/script&gt; is a co-cone &lt;script type=&quot;math/tex&quot;&gt;(L,\varphi)&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; such that for every other co-cone &lt;script type=&quot;math/tex&quot;&gt;(N,\psi)&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;, there is a unique &lt;script type=&quot;math/tex&quot;&gt;u\in\hom_C(L,N)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;u\circ\phi_X=\psi_X&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;X\in\ob(J)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Colimits are universal co-cones, which are the inital objects of the category of co-cones from &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;, and are unique up to isomorphism.&lt;/p&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Limits&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If J is the empty category, there is only one diagram of shape J. A cone to the empty diagram is essentially just an object from &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;. The limit of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is an object that is uniquely factored through by every other object. Such an object is a terminal object.&lt;/p&gt;
+
+&lt;p&gt;If J is a discrete category, then the diagram is a family of objects of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, and the limit is called the product of these objects. The cone contains the projections of the product. If the diagram is to a constant functor, the limit is the &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt;th power.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; has two objects &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; and two arrows &lt;script type=&quot;math/tex&quot;&gt;a\to b&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b\to a&lt;/script&gt;, the limit is the equalizer of two parallel arrows in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;If one of the arrow is the zero morphism, the equalizer is a kernel.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; be a digram which picks out three objects &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, with morphisms &lt;script type=&quot;math/tex&quot;&gt;f:X\to Z&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g:Y\to Z&lt;/script&gt;. Then the limit of F is a pullback or a fiber product.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; is a directed set and &lt;script type=&quot;math/tex&quot;&gt;F:J^\mathrm{op}\to C&lt;/script&gt; is a diagram, the limit is the inverse limit or projective limit.&lt;/p&gt;
+
+&lt;p&gt;If $J$ has an initial object &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;, the limit is an object isomorphic to &lt;script type=&quot;math/tex&quot;&gt;F(i)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Limits of functions are special case of limits of filters.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; be a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;. &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; the set of filters on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;x\in X&lt;/script&gt; a point, &lt;script type=&quot;math/tex&quot;&gt;V(x)\in F&lt;/script&gt; the neighborhood filter of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;A\in F&lt;/script&gt; a particular filter and &lt;script type=&quot;math/tex&quot;&gt;F_{x,A}=\{G\in F\mid V(x)\cup A\subset G\}&lt;/script&gt; the set of filters finer than &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and that converge to &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Make &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; a small and thin category by adding an arrow &lt;script type=&quot;math/tex&quot;&gt;A\to B&lt;/script&gt; if and only if &lt;script type=&quot;math/tex&quot;&gt;A\subseteq B&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then injection &lt;script type=&quot;math/tex&quot;&gt;I_{x,A}:F_{x,A}\to F&lt;/script&gt; is a functor and the following equivalence holds:&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is a topological limit of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; iff &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is a categorical limit of &lt;script type=&quot;math/tex&quot;&gt;I_{x,A}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Colimits&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Initial objects are colimits of empty diagrams.&lt;/p&gt;
+
+&lt;p&gt;Coproducts are colimits of diagrams indexed by discrete categories.&lt;/p&gt;
+
+&lt;p&gt;Copowers are colimits of constant diagrams from discrete categories.&lt;/p&gt;
+
+&lt;p&gt;Coequalizers are colimits of parallel pairs of morphisms.&lt;/p&gt;
+
+&lt;p&gt;Cokernels are coequalizers of a morphism and a parallel zero morphism.&lt;/p&gt;
+
+&lt;p&gt;Pushouts are colimits of a pair of morphism with common domain.&lt;/p&gt;
+
+&lt;p&gt;Direct limits are colimits of diagrams indexed by directed sets.&lt;/p&gt;
+
+&lt;h2 id=&quot;properties&quot;&gt;Properties&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Existence of limits&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TODO…&lt;/p&gt;</content><author><name></name></author><summary type="html">Wikipedia link</summary></entry><entry><title type="html">Type theory</title><link href="http://localhost:4000/maths/2018/09/05/type-theory.html" rel="alternate" type="text/html" title="Type theory" /><published>2018-09-05T08:00:00+02:00</published><updated>2018-09-05T08:00:00+02:00</updated><id>http://localhost:4000/maths/2018/09/05/type-theory</id><content type="html" xml:base="http://localhost:4000/maths/2018/09/05/type-theory.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_theory&quot; target=&quot;_blank&quot;&gt;Wikipedia link&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A type theory is a class of formal systems.&lt;/p&gt;
 
